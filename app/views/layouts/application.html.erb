@@ -9,6 +9,10 @@
   </head>
 
   <body>
+    <div class="well">
+      <%= flash[:success] %>
+      <%= flash[:failure] %>
+    </div>
     <%= yield %>
   </body>
 </html>

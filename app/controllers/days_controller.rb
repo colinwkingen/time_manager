@@ -7,17 +7,16 @@ class DaysController < ApplicationController
 
   def show
     @day = Day.find(params[:id])
-    render :show
   end
 
   def new
     @day = Day.new
-    render :new
   end
 
   def create
     @day = Day.new(day_params)
     if @day.save
+      flash[:success] = "Day Added"
       redirect_to  days_path
     else
       render :new
@@ -26,12 +25,12 @@ class DaysController < ApplicationController
 
   def edit
     @day = Day.find(params[:id])
-    render :edit
   end
 
   def update
     @day = Day.find(params[:id])
     if @day.update(day_params)
+      flash[:success] = "Day Updated"
       redirect_to days_path
     else
       render :edit

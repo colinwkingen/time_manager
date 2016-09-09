@@ -18,7 +18,6 @@ class HoursController < ApplicationController
   def edit
     @hour = Hour.find(params[:id])
     @day = Day.find(params[:day_id])
-    render :edit
   end
 
   def update
