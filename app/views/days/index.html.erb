@@ -2,7 +2,9 @@
 
 <ul>
   <% @days.each do |day| %>
-    <li><%= day.date %></li>
+    <li><%= day.date %>
+      <%= link_to day.date, day_path(day) %>
+    </li>
   <% end %>
 </ul>
 

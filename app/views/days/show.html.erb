@@ -1,3 +1,18 @@
 <h1><%= @day.date %></h1>
 
+<ul>
+    <% @day.hours.each do |hour| %>
+      <li>
+        <%= hour.activity %> |
+        <%= link_to "Edit", edit_day_hour_path(@day, hour) %> |
+      </li>
+    <% end %>
+  </ul>
+
+
+<p><%= link_to "Delete", day_path(@day),
+         :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"} %></p>
+
+
+<p><%= link_to "Change Activities", new_day_hour_path(@day) %></p>
 <p><%= link_to "Back", days_path %></p>

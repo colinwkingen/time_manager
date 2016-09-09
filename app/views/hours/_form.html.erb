@@ -1,0 +1,7 @@
+<%= render('layouts/errors', :object => @hour) %>
+
+<%= form_for [@day, @hour] do |f| %>
+  <%= f.label :activity %>
+  <%= f.text_field :activity %>
+  <p><%= f.submit %></p>
+<% end %>

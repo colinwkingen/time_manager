@@ -11,7 +11,7 @@ class DaysController < ApplicationController
   end
 
   def new
-    @list = List.new
+    @day = Day.new
     render :new
   end
 
