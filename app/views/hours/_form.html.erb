@@ -1,7 +1,15 @@
 <%= render('layouts/errors', :object => @hour) %>
 
-<%= form_for [@day, @hour] do |f| %>
-  <%= f.label :activity %>
-  <%= f.text_field :activity %>
-  <p><%= f.submit %></p>
+
+<% if @day.hours.length < 24 %>
+  <h5><%= @day.hours.length %></h5>
+  <%= form_for [@day, @hour] do |f| %>
+    <%= f.label :activity %>
+    <%= f.text_field :activity, class: "field" %>
+    <p><%= f.submit class: "btn btn-default field" %></p>
+  <% end %>
+<% else %>
+  <h4>All hours in this day are accounted for!</h4>
+  <h4>Alter an hour, or rethink your understanding of time.</h4>
 <% end %>
+<%= link_to "Back", days_path(@day) %>

@@ -4,6 +4,7 @@
   <% @days.each do |day| %>
     <li><%= day.date %>
       <%= link_to day.date, day_path(day) %>
+      <%= day.created_at %>
     </li>
   <% end %>
 </ul>
