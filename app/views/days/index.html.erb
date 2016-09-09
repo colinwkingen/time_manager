@@ -1,0 +1,10 @@
+<h1>Days</h1>
+
+<ul>
+  <% @days.each do |day| %>
+    <li><%= day.date %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Log a Day", new_day_path %>
