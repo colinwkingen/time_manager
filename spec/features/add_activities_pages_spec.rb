@@ -21,6 +21,16 @@ describe 'the add activity to day process' do
     expect(page).to have_content 'Choose an activity'
   end
 
+  it 'takes you to the add activity page and lets you return without adding' do
+    visit days_path
+    click_link 'Log a Day'
+    fill_in 'Date', :with => 'Thursday'
+    click_on 'Create Day'
+    click_link 'Thursday'
+    click_on 'Back'
+    expect(page).to have_content 'Days'
+  end
+
   it 'takes you to a page where you can specify the activity to add' do
     visit days_path
     click_link 'Log a Day'
