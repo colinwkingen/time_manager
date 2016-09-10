@@ -1,18 +1,23 @@
 <h1><%= @day.date %></h1>
 
-<ul>
+<ul class="list">
     <% @day.hours.each do |hour| %>
-      <li>
+      <li><h4><div class="list_item">
         <%= hour.activity %> |
         <%= link_to "Edit", edit_day_hour_path(@day, hour) %> |
-      </li>
+      </div></h4></li>
     <% end %>
   </ul>
 
-
-<p><%= link_to "Delete", day_path(@day),
-         :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
-
-
-<p><%= link_to "Change Activities", new_day_hour_path(@day), class: "btn btn-default field" %></p>
-<p><%= link_to "Back", days_path, class: "btn btn-default field" %></p>
+<div class="row">
+  <div class="col-xl-2">
+    <p><%= link_to "Change Activities", new_day_hour_path(@day), class: "btn btn-default field" %></p>
+  </div>
+  <div class="col-xl-2">
+    <p><%= link_to "Back", days_path, class: "btn btn-default field" %></p>
+  </div>
+  <div class="col-xl-2">
+    <p><%= link_to "Delete", day_path(@day),
+             :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
+  </div>
+</div>
