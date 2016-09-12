@@ -1,4 +1,4 @@
-## Meal Tracker in Angular JS
+## Time Tracker
 
 #### By Colin Kingen, 2016
 
