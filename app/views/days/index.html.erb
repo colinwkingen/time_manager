@@ -2,10 +2,11 @@
 
 <ul>
   <% @days.each do |day| %>
-    <li class="list"><h4><div class="list_item"><%= day.date %>
-      <%= link_to day.date, day_path(day) %>
-      <%= day.created_at %>
-      <%= day.datefield %>
+    <li class="list"><h4><div class="list_item">
+      <p><%= link_to day.date, day_path(day) %></p>
+      <p>Month: <%= day.datefield[5,2] %></p>
+      <p>Day: <%= day.datefield[8,9] %></p>
+      <p>Year: <%= day.datefield[0,4] %></p>
     </div></h4></li>
   <% end %>
 </ul>
