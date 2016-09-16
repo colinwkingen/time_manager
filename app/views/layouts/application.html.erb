@@ -28,7 +28,11 @@
           <% end %>
 
         </ul>
-        <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Default User</a></p>
+        <% if current_user %>
+          <p class="navbar-text navbar-right nav_user">Signed in as <a href="#" class="navbar-link"><%= current_user.name %></a></p>
+        <% else %>
+          <p class="navbar-text navbar-right nav_user">Not Logged In</p>
+        <% end %>
       </div>
     </nav>
     <div class="container">
