@@ -9,11 +9,35 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <p>Hourglass</p>
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+
+          <% if current_user %>
+            <li><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></li>
+            <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+
+          <% else %>
+            <li><%= link_to "Sign In", user_session_path %></li>
+            <li><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
+
+        </ul>
+        <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Default User</a></p>
+      </div>
+    </nav>
     <div class="container">
         <h2 class="page-header">Time Helper</h2>
       <div class="flashes">
         <%= flash[:success] %>
         <%= flash[:failure] %>
+        <%= flash[:notice] %>
+        <%= flash[:alert] %>
       </div>
       <%= yield %>
     </div>
