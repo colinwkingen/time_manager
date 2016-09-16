@@ -2,6 +2,13 @@ require 'rails_helper'
 
 describe 'the view and add day process' do
 
+  it 'allows a factory to create days for test usage' do
+    day = FactoryGirl.create(:day)
+    visit root_url
+    click_link day.date
+    expect(page).to have_content(day.date)
+  end
+
   it 'takes you to a page where you can add a day to the list' do
     visit days_path
     click_link 'Log a Day'

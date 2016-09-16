@@ -2,6 +2,13 @@ require 'rails_helper'
 
 describe 'the add activity to day process' do
 
+  it 'allows a factory to create hours for test usage' do
+    hour = FactoryGirl.create(:hour)
+    visit root_url
+    click_link Day.first.date
+    expect(page).to have_content(hour.activity)
+  end
+
   it 'takes you to a page where you can add an activity to a day' do
     visit days_path
     click_link 'Log a Day'

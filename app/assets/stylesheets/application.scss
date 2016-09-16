@@ -4,8 +4,8 @@
 
 
 body {
-  background-color: #150300;
-  color: #F7E8A8;
+  background-color: #000;
+  color: #E9E9FF;
 }
 
 .field {
@@ -14,7 +14,10 @@ body {
 
 .list_item {
   margin: 7px;
-  background-color: #341102;
+  background-color: #002;
+  border-style: solid;
+  border-color: #005;
+  border-width: thin;
 }
 
 .list {

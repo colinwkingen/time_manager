@@ -11,6 +11,13 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
         1,
         1,
         1,
@@ -353,12 +360,12 @@
         1,
         null,
         1,
-        19,
-        19,
+        21,
+        21,
         null,
         null,
         1,
-        7,
+        9,
         null,
         null,
         1,
@@ -470,6 +477,23 @@
         1,
         null
       ],
+      "/home/colinwkingen/Desktop/time_manager/spec/factories.rb": [
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/home/colinwkingen/Desktop/time_manager/config/routes.rb": [
         1,
         null,
@@ -485,6 +509,13 @@
         1,
         null,
         1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
         null,
         1,
         1,
@@ -536,6 +567,6 @@
         null
       ]
     },
-    "timestamp": 1474039450
+    "timestamp": 1474042973
   }
 }

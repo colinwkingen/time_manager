@@ -7,6 +7,20 @@ This app is viewable at: https://github.com/colinwkingen/time_manager
 ## Description
 
 This is the beginning of a time tracking app in Ruby on Rails, using Postgres.
+### Specifics to implement
+* You should be able to add a new activity in a field
+* You should be able to choose from available activities in a dropdown
+* You should be able to see all time percentages on a dashboard
+### User Stories
+* I want tp be able to log in to a personal account for my time management.
+* I want to see that i'm logged in on a nav bar
+* I want to be able to add days to the log
+* I want to be able to add specific activities to each day.
+* I want to see the percentage of an individual day spent on each activity.
+* I want to see the percentage of all total logged time spent on each activity.
+* I want to be able to remove a period of activity, and have the app confirm it.
+* I want to be able to compare the time I spend on an activity to the user average.
+
 
 
 ## Setup/Installation Requirements
