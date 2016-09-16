@@ -6,6 +6,7 @@ describe 'the add activity to day process' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Thursday'
+    fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
     expect(page).to have_content 'Thursday'
@@ -15,16 +16,29 @@ describe 'the add activity to day process' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Thursday'
+    fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Add Activity'
     expect(page).to have_content 'Choose an activity'
   end
 
+  it 'takes you to the add activity page and lets you return without adding' do
+    visit days_path
+    click_link 'Log a Day'
+    fill_in 'Date', :with => 'Thursday'
+    fill_in 'Datefield', :with => '03/24/1985'
+    click_on 'Create Day'
+    click_link 'Thursday'
+    click_on 'Back'
+    expect(page).to have_content 'Days'
+  end
+
   it 'takes you to a page where you can specify the activity to add' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Thursday'
+    fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Add Activity'
@@ -37,6 +51,7 @@ describe 'the add activity to day process' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Thursday'
+    fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Delete'
