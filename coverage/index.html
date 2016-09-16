@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-16T09:22:53-07:00">2016-09-16T09:22:53-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-16T09:35:19-07:00">2016-09-16T09:35:19-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.13%</span></span>
+    (<span class="covered_percent"><span class="green">96.3%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.33
+         1.37
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>32</b> files in total.
-    <b>233</b> relevant lines. 
-    <span class="green"><b>217</b> lines covered</span> and
-    <span class="red"><b>16</b> lines missed </span>
+    <b>33</b> files in total.
+    <b>243</b> relevant lines. 
+    <span class="green"><b>234</b> lines covered</span> and
+    <span class="red"><b>9</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -87,17 +87,17 @@
         <td>29</td>
         <td>22</td>
         <td>7</td>
-        <td>3.7</td>
+        <td>3.9</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#13124394811dc8f51cfc3927b1b79afab7599d9c" class="src_link" title="app/controllers/hours_controller.rb">app/controllers/hours_controller.rb</a></td>
-        <td class="red strong">62.5 %</td>
+        <td class="green strong">91.67 %</td>
         <td>38</td>
         <td>24</td>
-        <td>15</td>
-        <td>9</td>
-        <td>0.7</td>
+        <td>22</td>
+        <td>2</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -341,6 +341,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#1c4558f5464b937b0b96d587b0e45f1f34ee1529" class="src_link" title="spec/features/edit_hours_pages_spec.rb">spec/features/edit_hours_pages_spec.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>14</td>
+        <td>10</td>
+        <td>10</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#3d789acf915f4ded666337ccc4fff4a3f9e7b6f8" class="src_link" title="spec/models/day_spec.rb">spec/models/day_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>6</td>
@@ -538,14 +548,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="4">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="4">
+          <span class="hits">22</span>
           
           <code class="ruby">    @days = Day.all</code>
         </li>
       
-        <li class="covered" data-hits="21" data-linenumber="5">
-          <span class="hits">21</span>
+        <li class="covered" data-hits="22" data-linenumber="5">
+          <span class="hits">22</span>
           
           <code class="ruby">    render :index</code>
         </li>
@@ -568,8 +578,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="9">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="9">
+          <span class="hits">11</span>
           
           <code class="ruby">    @day = Day.find(params[:id])</code>
         </li>
@@ -833,11 +843,11 @@
         <div class="source_table" id="13124394811dc8f51cfc3927b1b79afab7599d9c">
   <div class="header">
     <h3>app/controllers/hours_controller.rb</h3>
-    <h4><span class="red">62.5 %</span> covered</h4>
+    <h4><span class="green">91.67 %</span> covered</h4>
     <div>
       <b>24</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>9</b> lines missed.</span>
+      <span class="green"><b>22</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -952,14 +962,14 @@
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">    @hour = Hour.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">    @day = Day.find(params[:day_id])</code>
         </li>
@@ -982,32 +992,32 @@
           <code class="ruby">  def update</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="24">
-          
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
           <code class="ruby">    @hour = Hour.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
           <code class="ruby">    @day = Day.find(params[:day_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
           <code class="ruby">    if @hour.update(hour_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="27">
-          
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
           
           <code class="ruby">      flash[:success] = &quot;Activity Changed&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="28">
-          
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
           
           <code class="ruby">      redirect_to day_path(@day)</code>
         </li>
@@ -1054,8 +1064,8 @@
           <code class="ruby">  def hour_params</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="36">
+          <span class="hits">2</span>
           
           <code class="ruby">    params.require(:hour).permit(:activity)</code>
         </li>
@@ -3443,6 +3453,108 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="1c4558f5464b937b0b96d587b0e45f1f34ee1529">
+  <div class="header">
+    <h3>spec/features/edit_hours_pages_spec.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &#39;rails_helper&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &#39;the edit activity process&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;allows a user to edit the set activity of an hour&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    hour = FactoryGirl.create(:hour)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit root_url</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link Day.first.date</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Edit&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Activity&#39;, :with =&gt; &#39;Bake Brownies&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Update Hour&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(&#39;Bake Brownies&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>

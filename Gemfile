@@ -11,10 +11,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'minitest-rails'
+gem 'devise'
 
 # minitest rails drops the test db after each rspec run
 # it is enabled in the test_helper.rb by changing minitest/autorun
-# to minitest/rails 
+# to minitest/rails
 
 group :development, :test do
   gem 'byebug', platform: :mri

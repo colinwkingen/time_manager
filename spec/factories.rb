@@ -1,6 +1,9 @@
 
 
 FactoryGirl.define do
+  factory :user do
+    
+  end
 
   factory(:day) do
     datefield('03/24/1985')
