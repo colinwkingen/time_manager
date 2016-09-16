@@ -12,6 +12,7 @@ describe 'the view and add day process' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Saturday'
+    fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     expect(page).to have_content 'Saturday'
   end
@@ -27,6 +28,7 @@ describe 'the view and add day process' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Friday'
+    fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Friday'
     expect(page).to have_content 'Friday'
