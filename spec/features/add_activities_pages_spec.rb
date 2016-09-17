@@ -4,13 +4,14 @@ require 'devise'
 describe 'the add activity to day process' do
 
   before do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user, :email => "mail@mail.mail")
     login_as(user, :scope => :user, :run_callbacks => false)
   end
 
 
   it 'allows a factory to create hours for test usage' do
     hour = FactoryGirl.create(:hour)
+    day = FactoryGirl.create(:day)
     visit root_url
     click_link Day.first.date
     expect(page).to have_content(hour.activity)

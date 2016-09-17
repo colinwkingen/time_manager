@@ -1,9 +1,10 @@
 require 'rails_helper'
+require 'devise'
 
 describe 'the view and add day process' do
 
   before do
-    user = FactoryGirl.create(:user)
+    user = FactoryGirl.create(:user, :email => "mail@mail.mail")
     login_as(user, :scope => :user, :run_callbacks => false)
   end
 
