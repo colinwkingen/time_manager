@@ -14,6 +14,7 @@ class DaysController < ApplicationController
 
   def create
     @day = Day.new(day_params)
+    @day.user_id = current_user.id
     if @day.save
       flash[:success] = "Day Added"
       redirect_to  days_path
