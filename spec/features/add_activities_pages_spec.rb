@@ -8,16 +8,6 @@ describe 'the add activity to day process' do
     login_as(user, :scope => :user, :run_callbacks => false)
   end
 
-
-  it 'allows a factory to create hours for test usage' do
-    hour = FactoryGirl.create(:hour)
-    day = FactoryGirl.create(:day)
-    visit root_url
-    click_link Day.first.date
-    expect(page).to have_content(hour.activity)
-    Warden.test_reset!
-  end
-
   it 'takes you to a page where you can add an activity to a day' do
     visit days_path
     click_link 'Log a Day'
