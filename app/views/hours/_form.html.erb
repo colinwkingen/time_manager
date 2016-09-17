@@ -2,10 +2,17 @@
 
 
 <% if @day.hours.length < 24 %>
-  <h5><%= @day.hours.length %></h5>
+  <h5>There are <%= @day.hours.length %> hours accounted for.</h5>
   <%= form_for [@day, @hour] do |f| %>
     <%= f.label :activity %>
-    <%= f.text_field :activity, class: "field" %>
+
+    <div id="drop_down">
+      <%= f.select :activity, [['Please Choose an Activity','1'],['Sleep','2'],['Work','3'],['Eat','4']], id: 'drop_down', selected: 1 %>
+    </div>
+
+
+
+
     <p><%= f.submit class: "btn btn-default field" %></p>
   <% end %>
 <% else %>
