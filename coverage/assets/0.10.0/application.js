@@ -1298,8 +1298,8 @@ jQuery.fn.dataTableExt.oSort['percent-desc'] = function(a,b) {
         seconds: "less than a minute",
         minute: "about a minute",
         minutes: "%d minutes",
-        activity: "about an activity",
-        activities: "about %d activities",
+        hour: "about an hour",
+        hours: "about %d hours",
         day: "a day",
         days: "%d days",
         month: "about a month",
@@ -1323,8 +1323,8 @@ jQuery.fn.dataTableExt.oSort['percent-desc'] = function(a,b) {
 
       var seconds = distanceMillis / 1000;
       var minutes = seconds / 60;
-      var activities = minutes / 60;
-      var days = activities / 24;
+      var hours = minutes / 60;
+      var days = hours / 24;
       var years = days / 365;
 
       function substitute(stringOrFunction, number) {
@@ -1336,9 +1336,9 @@ jQuery.fn.dataTableExt.oSort['percent-desc'] = function(a,b) {
       var words = seconds < 45 && substitute($l.seconds, Math.round(seconds)) ||
         seconds < 90 && substitute($l.minute, 1) ||
         minutes < 45 && substitute($l.minutes, Math.round(minutes)) ||
-        minutes < 90 && substitute($l.activity, 1) ||
-        activities < 24 && substitute($l.activities, Math.round(activities)) ||
-        activities < 48 && substitute($l.day, 1) ||
+        minutes < 90 && substitute($l.hour, 1) ||
+        hours < 24 && substitute($l.hours, Math.round(hours)) ||
+        hours < 48 && substitute($l.day, 1) ||
         days < 30 && substitute($l.days, Math.floor(days)) ||
         days < 60 && substitute($l.month, 1) ||
         days < 365 && substitute($l.months, Math.floor(days / 30)) ||

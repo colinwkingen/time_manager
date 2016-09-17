@@ -14,8 +14,8 @@ describe 'the edit activity process' do
     visit root_url
     click_link Day.first.date
     click_link 'Edit'
-    fill_in 'Activity', :with => 'Bake Brownies'
+    select 'Sleep'
     click_on 'Update Activity'
-    expect(page).to have_content('Bake Brownies')
+    expect(page).to have_content('2')
   end
 end
