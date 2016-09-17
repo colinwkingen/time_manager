@@ -54,7 +54,7 @@ describe 'the add activity to day process' do
     click_link 'Thursday'
     click_on 'Add Activity'
     fill_in 'Activity', :with => 'Baking Cupcakes'
-    click_on 'Create Hour'
+    click_on 'Create Activity'
     expect(page).to have_content 'Baking Cupcakes'
     Warden.test_reset!
   end

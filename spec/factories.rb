@@ -13,7 +13,7 @@ FactoryGirl.define do
     user
   end
 
-  factory(:hour) do
+  factory(:activity) do
     activity('Baking Cupcakes')
     day
   end
