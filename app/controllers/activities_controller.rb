@@ -1,29 +1,29 @@
-class HoursController < ApplicationController
+class ActivitiesController < ApplicationController
   def new
     @day = Day.find(params[:day_id])
-    @hour = @day.hours.new
+    @activity = @day.activities.new
   end
 
   def create
     @day = Day.find(params[:day_id])
-    @hour = @day.hours.new(hour_params)
-    if @hour.save
+    @activity = @day.activities.new(activity_params)
+    if @activity.save
       flash[:success] = "Activity Set"
-      redirect_to day_path(@hour.day)
+      redirect_to day_path(@activity.day)
     else
       render :new
     end
   end
 
   def edit
-    @hour = Hour.find(params[:id])
+    @activity = Activity.find(params[:id])
     @day = Day.find(params[:day_id])
   end
 
   def update
-    @hour = Hour.find(params[:id])
+    @activity = Activity.find(params[:id])
     @day = Day.find(params[:day_id])
-    if @hour.update(hour_params)
+    if @activity.update(activity_params)
       flash[:success] = "Activity Changed"
       redirect_to day_path(@day)
     else
@@ -32,7 +32,7 @@ class HoursController < ApplicationController
   end
 
   private
-  def hour_params
-    params.require(:hour).permit(:activity)
+  def activity_params
+    params.require(:activity).permit(:activity)
   end
 end

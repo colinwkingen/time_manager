@@ -15,19 +15,19 @@ ActiveRecord::Schema.define(version: 20160916182420) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "activities", force: :cascade do |t|
+    t.string   "activity"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "day_id"
+  end
+
   create_table "days", force: :cascade do |t|
     t.string   "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "datefield"
     t.integer  "user_id"
-  end
-
-  create_table "hours", force: :cascade do |t|
-    t.string   "activity"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "day_id"
   end
 
   create_table "users", force: :cascade do |t|

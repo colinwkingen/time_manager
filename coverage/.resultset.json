@@ -730,7 +730,7 @@
         null,
         null
       ],
-      "/home/colinwkingen/Desktop/time_manager/app/controllers/hours_controller.rb": [
+      "/home/colinwkingen/Desktop/time_manager/app/controllers/activities_controller.rb": [
         1,
         1,
         2,
@@ -788,7 +788,7 @@
         1,
         null
       ],
-      "/home/colinwkingen/Desktop/time_manager/app/models/hour.rb": [
+      "/home/colinwkingen/Desktop/time_manager/app/models/activity.rb": [
         1,
         1,
         1,
@@ -872,7 +872,7 @@
         null,
         null
       ],
-      "/home/colinwkingen/Desktop/time_manager/spec/features/edit_hours_pages_spec.rb": [
+      "/home/colinwkingen/Desktop/time_manager/spec/features/edit_activities_pages_spec.rb": [
         1,
         1,
         null,
@@ -903,7 +903,7 @@
         2,
         null
       ],
-      "/home/colinwkingen/Desktop/time_manager/spec/models/hour_spec.rb": [
+      "/home/colinwkingen/Desktop/time_manager/spec/models/activity_spec.rb": [
         1,
         null,
         1,
