@@ -784,11 +784,18 @@
         1,
         1,
         1,
+        1,
         null
       ],
       "/home/colinwkingen/Desktop/time_manager/app/models/day.rb": [
         1,
         1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/home/colinwkingen/Desktop/time_manager/app/models/tag.rb": [
         1,
         1,
         1,
@@ -921,6 +928,6 @@
         null
       ]
     },
-    "timestamp": 1474125203
+    "timestamp": 1474225684
   }
 }
