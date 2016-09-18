@@ -3,7 +3,7 @@
 <%= form_for @day do |f| %>
   <%= f.label :date %>
   <div id="drop_down">
-    <%= f.select :activity, [['Please Select a Day','Unspecified'],['Sunday','sunday'],['Monday','monday'],['Tuesday','tuesday'],['Wednesday','wednesday'],['Thursday','thursday'],['Friday','friday'],['Saturday','saturday']], id: 'drop_down', selected: 1 %>
+    <%= f.select :date, [['Please Select a Day','Unspecified'],['Sunday','Sunday'],['Monday','Monday'],['Tuesday','Tuesday'],['Wednesday','Wednesday'],['Thursday','Thursday'],['Friday','Friday'],['Saturday','Saturday']], id: 'drop_down', selected: 1 %>
   </div>
   <%= f.label :datefield %>
   <%= f.date_field :datefield, class: "field" %>

@@ -7,4 +7,8 @@ Rails.application.routes.draw do
     resources :activities, :except => [:show, :index]
   end
 
+  resources :activities do
+    resources :tags
+  end
+
 end
