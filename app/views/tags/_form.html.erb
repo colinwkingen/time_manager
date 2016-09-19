@@ -1,0 +1,8 @@
+<%= form_for [ Tag.new ], url: activity_tags_path(:activity_id) do |f| %>
+
+
+  <%= f.label :name %>
+  <%= f.text_field  :name %>
+  <p><%= f.submit class: "btn btn-default field" %></p>
+
+<% end %>

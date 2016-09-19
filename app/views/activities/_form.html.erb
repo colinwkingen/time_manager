@@ -19,9 +19,6 @@
   <h4>Alter an activity, or rethink your understanding of time.</h4>
 <% end %>
 
-<%= Tag.all.each do |tag| %>
-  <h2><%= tag.name %></h2>
-<% end %>
+<%= render('tags/form') %>
 
-
-<%= link_to "Back", days_path(@day), class: "btn btn-default field" %>
+<%= link_to "Back", day_path(@day), class: "btn btn-default field" %>

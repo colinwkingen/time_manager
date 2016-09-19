@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :activities do
-    resources :tags
+    resources :tags, :only => [:new, :create, :show]
   end
 
 end

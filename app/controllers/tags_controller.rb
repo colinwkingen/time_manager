@@ -9,6 +9,7 @@ class TagsController < ApplicationController
   end
 
   def new
+    @activity = Activity.find(params[:activity_id])
     @tag = Tag.new
   end
 
@@ -16,9 +17,9 @@ class TagsController < ApplicationController
     @tag = Tag.new(tag_params)
     if @tag.save
       flash[:success] = "Tag Added"
-      redirect_to  days_activities_path
+      redirect_to  day_activities_path(@day)
     else
-      render :root
+      render :new
     end
   end
 
