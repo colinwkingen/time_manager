@@ -54,9 +54,9 @@ describe 'the add activity to day process' do
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Add Activity'
-    select 'Clean', :from => 'Activity'
+    select 'Baking Cupcakes', :from => 'Activity'
     click_on 'Add A Tag'
-    expect(page).to have_content 'Clean'
+    expect(page).to have_content 'Baking Cupcakes'
     Warden.test_reset!
   end
 
