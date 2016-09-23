@@ -20,4 +20,15 @@ describe 'the add tag process' do
     click_on 'Add A Tag'
     expect(page).to have_content('Baking Cupcakes')
   end
+
+  it 'allows a user to add extra tags to the available list with AJAX', js: true do
+    day  = FactoryGirl.create(:day)
+    visit days_path
+    click_link 'Thursday'
+    click_link 'Add Activity'
+    fill_in 'Name', :with => 'Coding'
+    click_on 'Create Tag'
+    expect(page).to have_content('Coding')
+  end
+
 end

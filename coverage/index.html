@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-23T14:17:56-07:00">2016-09-23T14:17:56-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-09-23T14:26:52-07:00">2016-09-23T14:26:52-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.45%</span></span>
+    (<span class="covered_percent"><span class="green">93.87%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.4
+         1.46
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>38</b> files in total.
-    <b>351</b> relevant lines. 
-    <span class="green"><b>321</b> lines covered</span> and
-    <span class="red"><b>30</b> lines missed </span>
+    <b>359</b> relevant lines. 
+    <span class="green"><b>337</b> lines covered</span> and
+    <span class="red"><b>22</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -77,7 +77,7 @@
         <td>30</td>
         <td>21</td>
         <td>9</td>
-        <td>1.1</td>
+        <td>1.3</td>
       </tr>
       
       <tr>
@@ -97,17 +97,17 @@
         <td>29</td>
         <td>22</td>
         <td>7</td>
-        <td>3.3</td>
+        <td>3.4</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#35ae5e241b36cebc88402820c7dde85ae0eec741" class="src_link" title="app/controllers/tags_controller.rb">app/controllers/tags_controller.rb</a></td>
-        <td class="red strong">36.84 %</td>
+        <td class="red strong">78.95 %</td>
         <td>33</td>
         <td>19</td>
-        <td>7</td>
-        <td>12</td>
-        <td>0.4</td>
+        <td>15</td>
+        <td>4</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -347,7 +347,7 @@
         <td>14</td>
         <td>14</td>
         <td>0</td>
-        <td>2.4</td>
+        <td>2.7</td>
       </tr>
       
       <tr>
@@ -373,11 +373,11 @@
       <tr>
         <td class="strong"><a href="#7a0a01df4d07b5c1c0b0094faa727e5daf335644" class="src_link" title="spec/features/add_tags_pages_spec.rb">spec/features/add_tags_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>23</td>
-        <td>17</td>
-        <td>17</td>
+        <td>34</td>
+        <td>25</td>
+        <td>25</td>
         <td>0</td>
-        <td>1.0</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
@@ -427,7 +427,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>2.7</td>
+        <td>2.8</td>
       </tr>
       
     </tbody>
@@ -592,26 +592,26 @@
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="9">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="9">
+          <span class="hits">3</span>
           
           <code class="ruby">    @day = Day.find(params[:day_id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="10">
+          <span class="hits">3</span>
           
           <code class="ruby">    @activity = @day.activities.create({activity: &quot;Void&quot;})</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="11">
+          <span class="hits">3</span>
           
           <code class="ruby">    @tags = Tag.all</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
           
           <code class="ruby">    @tag= Tag.new</code>
         </li>
@@ -952,8 +952,8 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="22" data-linenumber="4">
-          <span class="hits">22</span>
+        <li class="covered" data-hits="23" data-linenumber="4">
+          <span class="hits">23</span>
           
           <code class="ruby">    @days = Day.all</code>
         </li>
@@ -976,8 +976,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="8">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="12" data-linenumber="8">
+          <span class="hits">12</span>
           
           <code class="ruby">    @day = Day.find(params[:id])</code>
         </li>
@@ -1247,11 +1247,11 @@
         <div class="source_table" id="35ae5e241b36cebc88402820c7dde85ae0eec741">
   <div class="header">
     <h3>app/controllers/tags_controller.rb</h3>
-    <h4><span class="red">36.84 %</span> covered</h4>
+    <h4><span class="red">78.95 %</span> covered</h4>
     <div>
       <b>19</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>12</b> lines missed.</span>
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -1348,44 +1348,44 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
           <code class="ruby">    @tag = Tag.new(tag_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
           <code class="ruby">    @activity = Activity.find(params[:activity_id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="18">
-          
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
           
           <code class="ruby">    if @tag.save</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
           
           <code class="ruby">      flash[:success] = &quot;Tag Added&quot;</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="20">
-          
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
           
           <code class="ruby">      respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
           
           <code class="ruby">        format.html { redirect_to new_day_activity_path(@activity.day_id) }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
           <code class="ruby">        format.js</code>
         </li>
@@ -1438,8 +1438,8 @@
           <code class="ruby">  def tag_params</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
-          
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
           
           <code class="ruby">    params.require(:tag).permit(:name)</code>
         </li>
@@ -4882,14 +4882,14 @@
           <code class="ruby">  factory :user do</code>
         </li>
       
-        <li class="covered" data-hits="16" data-linenumber="6">
-          <span class="hits">16</span>
+        <li class="covered" data-hits="18" data-linenumber="6">
+          <span class="hits">18</span>
           
           <code class="ruby">    sequence(:name)   { |n| &quot;Person #{n}&quot; }</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="7">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="7">
+          <span class="hits">8</span>
           
           <code class="ruby">    sequence(:email)      { |n| &quot;person_#{n}@example.com&quot; }</code>
         </li>
@@ -5857,8 +5857,8 @@
     <h3>spec/features/add_tags_pages_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>25</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5902,20 +5902,20 @@
           <code class="ruby">  before do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="7">
+          <span class="hits">2</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
           
           <code class="ruby">    user = FactoryGirl.create(:user)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
           
           <code class="ruby">    login_as(user, :scope =&gt; :user, :run_callbacks =&gt; false)</code>
         </li>
@@ -5999,6 +5999,72 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &#39;allows a user to add extra tags to the available list with AJAX&#39;, js: true do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    day  = FactoryGirl.create(:day)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit days_path</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Thursday&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_link &#39;Add Activity&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &#39;Name&#39;, :with =&gt; &#39;Coding&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Create Tag&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content(&#39;Coding&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">end</code>
@@ -6622,14 +6688,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="44">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="20" data-linenumber="44">
+          <span class="hits">20</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="45">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="20" data-linenumber="45">
+          <span class="hits">20</span>
           
           <code class="ruby">      example.run</code>
         </li>
