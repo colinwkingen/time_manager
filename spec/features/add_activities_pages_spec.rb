@@ -42,7 +42,7 @@ describe 'the add activity to day process' do
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Back'
-    expect(page).to have_content 'Days'
+    expect(page).to have_content 'Your Dashboard'
     Warden.test_reset!
   end
 
@@ -68,7 +68,7 @@ describe 'the add activity to day process' do
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Delete'
-    expect(page).to have_content 'Days'
+    expect(page).to have_content 'Your Dashboard'
     Warden.test_reset!
   end
 

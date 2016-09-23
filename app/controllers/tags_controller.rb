@@ -13,8 +13,9 @@ class TagsController < ApplicationController
   end
 
   def create
-    @tag = Tag.new(tag_params)
+
     @activity = Activity.find(params[:activity_id])
+    @tag = @activity.tags.new(tag_params)
     if @tag.save
       flash[:success] = "Tag Added"
       respond_to do |format|

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root :to => 'days#index'
 
   resources :days  do
-    resources :activities, :except => [:index]
+    resources :activities
   end
 
   resources :activities do

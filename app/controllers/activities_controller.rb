@@ -1,5 +1,9 @@
 class ActivitiesController < ApplicationController
 
+  def index
+    @day = Day.find(params[:day_id])
+  end
+
   def show
     @activities = Activity.all
   end
@@ -7,7 +11,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @day = Day.find(params[:day_id])
-    @activity = @day.activities.create({activity: "Void"})
+    @activity = @day.activities.create({activity: "Entry Not Named"})
     @tags = Tag.all
     @tag= Tag.new
   end
@@ -25,8 +29,8 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
-    @tags = Tag.all
     @activity = Activity.find(params[:id])
+    @tags = Tag.all
     @day = Day.find(params[:day_id])
   end
 

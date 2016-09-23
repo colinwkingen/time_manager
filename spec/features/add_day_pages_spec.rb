@@ -37,7 +37,7 @@ describe 'the view and add day process' do
     visit days_path
     click_link 'Log a Day'
     click_link 'Back'
-    expect(page).to have_content 'Days'
+    expect(page).to have_content 'Your Dashboard'
     Warden.test_reset!
   end
 

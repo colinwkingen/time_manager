@@ -807,6 +807,7 @@
         null,
         null,
         1,
+        null,
         1,
         1,
         1,
@@ -841,6 +842,14 @@
         1,
         1,
         1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/home/colinwkingen/Desktop/time_manager/app/models/day.rb": [
@@ -1036,6 +1045,6 @@
         null
       ]
     },
-    "timestamp": 1474666012
+    "timestamp": 1474670046
   }
 }
