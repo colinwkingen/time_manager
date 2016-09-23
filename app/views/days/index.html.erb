@@ -1,16 +1,19 @@
-<h1>Days</h1>
 
-<ul>
-  <% Day.all.each do |day| %>
-    <li class="list"><h4><div class="list_item">
-      <p><%= link_to day.date, day_path(day) %>
-      Month: <%= day.datefield[5,2] %>
-      Day: <%= day.datefield[8,9] %>
-      Year: <%= day.datefield[0,4] %></p>
-    </div></h4></li>
-  <% end %>
-  <li class="list"><h2>This will be a dashboard for all users activity data.</h2></li>
-</ul>
+<% if current_user %>
+  <h2>Your Dashboard</h2>
+  <ul>
+    <% Day.all.each do |day| %>
+      <li class="list"><h4><div class="list_item">
+        <p><%= link_to day.date, day_path(day) %>
+        Month: <%= day.datefield[5,2] %>
+        Day: <%= day.datefield[8,9] %>
+        Year: <%= day.datefield[0,4] %></p>
+      </div></h4></li>
+    <% end %>
+  </ul>
 
+<% else %>
 
-<%= link_to "Log a Day", new_day_path, class: "btn btn-default field" %>
+<h2>Please log in or sign up to continue.</h2>
+
+<% end %>

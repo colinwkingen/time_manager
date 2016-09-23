@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TimeManager</title>
+    <title>Activityglass</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -22,6 +22,7 @@
           <% if current_user %>
             <li><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Log a Day", new_day_path %></li>
 
           <% else %>
             <li><%= link_to "Sign In", user_session_path, id: 'signin' %></li>
@@ -37,7 +38,6 @@
       </div>
     </nav>
     <div class="container">
-        <h2 class="page-header">Time Helper</h2>
       <div class="flashes">
         <%= flash[:success] %>
         <%= flash[:failure] %>
