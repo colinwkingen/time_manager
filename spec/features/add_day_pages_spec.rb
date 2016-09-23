@@ -23,10 +23,10 @@ describe 'the view and add day process' do
     Warden.test_reset!
   end
 
-  it 'takes you to a page where you can add a day to the list' do
+  it 'takes you to a page where you can add a specific date to the list' do
     visit days_path
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Saturday'
+    select 'Saturday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     expect(page).to have_content 'Saturday'
@@ -44,7 +44,7 @@ describe 'the view and add day process' do
   it 'takes you to a page where you can add a day to the list' do
     visit days_path
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Friday'
+    select 'Friday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Friday'

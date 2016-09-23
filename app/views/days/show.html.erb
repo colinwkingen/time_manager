@@ -1,13 +1,13 @@
 <h1><%= @day.date %></h1>
 
 <ul class="list">
-    <% @day.activities.each do |activity| %>
-      <li><h4><div class="list_item">
-        <%= activity.activity %> |
-        <%= link_to "Edit", edit_day_activity_path(@day, activity) %> |
-      </div></h4></li>
-    <% end %>
-  </ul>
+  <% @day.activities.each do |activity| %>
+    <li><h4><div class="list_item">
+      <%= activity.activity %> |
+      <%= link_to "This Activity", edit_day_activity_path(@day, activity) %> |
+    </div></h4></li>
+  <% end %>
+</ul>
 
 <div class="row">
   <div class="col-xl-2">

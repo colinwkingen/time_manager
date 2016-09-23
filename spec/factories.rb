@@ -17,4 +17,8 @@ FactoryGirl.define do
     activity('Baking Cupcakes')
     day
   end
+
+  factory(:tag) do
+    name('Clean')
+  end
 end

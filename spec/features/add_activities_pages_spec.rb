@@ -5,13 +5,14 @@ describe 'the add activity to day process' do
 
   before do
     user = FactoryGirl.create(:user, :email => "mail@mail.mail")
+    tag = FactoryGirl.create(:tag)
     login_as(user, :scope => :user, :run_callbacks => false)
   end
 
   it 'takes you to a page where you can add an activity to a day' do
     visit days_path
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Thursday'
+    select 'Thursday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
@@ -24,19 +25,19 @@ describe 'the add activity to day process' do
     # user = FactoryGirl.create(:user)
     # login_as(user, :scope => :user)
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Thursday'
+    select 'Thursday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Add Activity'
-    expect(page).to have_content 'Choose an activity'
+    expect(page).to have_content 'Tag this activity for Thursday'
     Warden.test_reset!
   end
 
   it 'takes you to the add activity page and lets you return without adding' do
     visit days_path
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Thursday'
+    select 'Thursday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
@@ -48,21 +49,21 @@ describe 'the add activity to day process' do
   it 'takes you to a page where you can create an activity' do
     visit days_path
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Thursday'
+    select 'Thursday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Add Activity'
-    select 'Sleep'
-    click_on 'Create Activity'
-    expect(page).to have_content '2'
+    select 'Clean', :from => 'Activity'
+    click_on 'Add A Tag'
+    expect(page).to have_content 'Clean'
     Warden.test_reset!
   end
 
   it 'lets you delete a logged day from the main list' do
     visit days_path
     click_link 'Log a Day'
-    fill_in 'Date', :with => 'Thursday'
+    select 'Thursday', :from => 'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     click_link 'Thursday'

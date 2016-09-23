@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => 'days#index'
 
-  resources :days, :except => [:update, :destroy] do
+  resources :days  do
     resources :activities, :except => [:index]
   end
 
@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :tags
   end
 
-  resources :tags, :except => [:show, :update]
+  resources :tags
 
 end
