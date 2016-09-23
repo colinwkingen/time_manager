@@ -1,12 +1,21 @@
 class ActivitiesController < ApplicationController
+
+  def show
+    @activities = Activity.all
+  end
+
+
   def new
     @day = Day.find(params[:day_id])
-    @activity = @day.activities.new
+    @activity = @day.activities.create({activity: "Void"})
+    @tags = Tag.all
+    @tag= Tag.new
   end
 
   def create
     @day = Day.find(params[:day_id])
     @activity = @day.activities.new(activity_params)
+    @activity.day_id = @day.id
     if @activity.save
       flash[:success] = "Activity Set"
       redirect_to day_path(@activity.day)
@@ -16,6 +25,7 @@ class ActivitiesController < ApplicationController
   end
 
   def edit
+    @tags = Tag.all
     @activity = Activity.find(params[:id])
     @day = Day.find(params[:day_id])
   end

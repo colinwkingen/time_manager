@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160916182420) do
+ActiveRecord::Schema.define(version: 20160919042044) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(version: 20160916182420) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "day_id"
+    t.integer  "start_time"
+    t.integer  "end_time"
+  end
+
+  create_table "activities_tags", id: false, force: :cascade do |t|
+    t.integer "activity_id", null: false
+    t.integer "tag_id",      null: false
+    t.index ["activity_id", "tag_id"], name: "index_activities_tags_on_activity_id_and_tag_id", using: :btree
   end
 
   create_table "days", force: :cascade do |t|
@@ -28,6 +36,12 @@ ActiveRecord::Schema.define(version: 20160916182420) do
     t.datetime "updated_at", null: false
     t.string   "datefield"
     t.integer  "user_id"
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

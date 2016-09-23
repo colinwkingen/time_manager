@@ -21,8 +21,8 @@ describe 'the add activity to day process' do
 
   it 'takes you to a page where you can specify the activity to add' do
     visit days_path
-    user = FactoryGirl.create(:user)
-    login_as(user, :scope => :user)
+    # user = FactoryGirl.create(:user)
+    # login_as(user, :scope => :user)
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Thursday'
     fill_in 'Datefield', :with => '03/24/1985'
@@ -45,7 +45,7 @@ describe 'the add activity to day process' do
     Warden.test_reset!
   end
 
-  it 'takes you to a page where you can specify the activity to add' do
+  it 'takes you to a page where you can create an activity' do
     visit days_path
     click_link 'Log a Day'
     fill_in 'Date', :with => 'Thursday'
@@ -53,9 +53,9 @@ describe 'the add activity to day process' do
     click_on 'Create Day'
     click_link 'Thursday'
     click_on 'Add Activity'
-    fill_in 'Activity', :with => 'Baking Cupcakes'
+    select 'Sleep'
     click_on 'Create Activity'
-    expect(page).to have_content 'Baking Cupcakes'
+    expect(page).to have_content '2'
     Warden.test_reset!
   end
 

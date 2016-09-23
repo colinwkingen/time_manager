@@ -37,8 +37,12 @@ body {
   color: black;
 }
 #drop_down {
-  color: black;
+  color: black !important;
 }
 .nav_user {
   margin-right: 15px;
+}
+
+option, select, form {
+  color: black;
 }

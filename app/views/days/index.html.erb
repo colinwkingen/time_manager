@@ -1,7 +1,7 @@
 <h1>Days</h1>
 
 <ul>
-  <% @days.each do |day| %>
+  <% Day.all.each do |day| %>
     <li class="list"><h4><div class="list_item">
       <p><%= link_to day.date, day_path(day) %>
       Month: <%= day.datefield[5,2] %>

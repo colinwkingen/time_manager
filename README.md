@@ -7,6 +7,17 @@ This app is viewable at: https://github.com/colinwkingen/time_manager
 ## Description
 
 This is the beginning of a time tracking app in Ruby on Rails, using Postgres.
+
+### Bug Hunting
+
+for creating new tags in the create activity view without rendering new view:
+activity did not exist so we create an activity when the new route is reached
+further tag additions will need to use the update routes
+destroying untagged dummy activities will need to be handled if user navigates from activity save without creation.. possibly activity.last.destroy on back
+
+
+maybe you should just allow the user to add a day with a title from the main view day route, then let them add tags in the edit path. this shit is getting annoying. swim with the current, not against it.
+
 ### Specifics to implement
 * You should be able to add a new activity in a field
 * You should be able to choose from available activities in a dropdown
@@ -28,9 +39,10 @@ This is the beginning of a time tracking app in Ruby on Rails, using Postgres.
 * Clone the repo from github
 * Make sure Postgres is installed and running
 * Make sure you have the node.js environment, rails 5 and activerecord installed.
-* Run rails db:migrate
-* Run the rails server
-* Navigate to localhost:3000
+* Run $rails db:create
+* Run $rails db:migrate
+* Run the rails server with $rails s
+* Navigate to http://localhost:3000
 
 ## Known Bugs
 
