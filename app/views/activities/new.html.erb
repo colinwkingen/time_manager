@@ -1,8 +1,12 @@
 <h1>Choose an tag for this activity on <%= @day.date %></h1>
 
 
+<div class="row">
+  <div class="col-lg-6">
 
+    <%= render 'form' %>
 
-<%= render 'form' %>
+    <%= render('tags/form') %>
 
-<%= render('tags/form') %>
+  </div>
+</div>

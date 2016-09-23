@@ -1,23 +1,23 @@
 <%= render('layouts/errors', :object => @activity) %>
 
 
-<% if @day.activities.length < 24 %>
-  <h5>There are <%= @day.activities.length %> activities accounted for.</h5>
-  <%= form_for [@day, @activity] do |f| %>
-    <%= f.label :activity %>
+  <% if @day.activities.length < 24 %>
+    <h5>There are <%= @day.activities.length %> activities accounted for.</h5>
+    <%= form_for [@day, @activity] do |f| %>
+      <%= f.label :activity %>
 
 
 
-    <% tags = options_from_collection_for_select(@tags,'name', 'name') %>
-    <%= f.select :activity, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
+      <% tags = options_from_collection_for_select(@tags,'name', 'name') %>
+      <%= f.select :activity, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
 
 
-    <p><%= f.submit 'Add A Tag', class: "btn btn-default field" %></p>
+      <p><%= f.submit 'Add A Tag', class: "btn btn-default field" %></p>
+    <% end %>
+  <% else %>
+    <h4>All activities in this day are accounted for!</h4>
+    <h4>Alter an activity, or rethink your understanding of time.</h4>
   <% end %>
-<% else %>
-  <h4>All activities in this day are accounted for!</h4>
-  <h4>Alter an activity, or rethink your understanding of time.</h4>
-<% end %>
 
 
-<%= link_to "Back", day_path(@day), class: "btn btn-default field" %>
+  <%= link_to "Back", day_path(@day), class: "btn btn-default field" %>

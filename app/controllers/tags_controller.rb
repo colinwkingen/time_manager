@@ -17,7 +17,10 @@ class TagsController < ApplicationController
     @activity = Activity.find(params[:activity_id])
     if @tag.save
       flash[:success] = "Tag Added"
-      redirect_to new_day_activity_path(@activity.day_id)
+      respond_to do |format|
+        format.html { redirect_to new_day_activity_path(@activity.day_id) }
+        format.js
+      end
     else
       redirect_to root_path
     end
