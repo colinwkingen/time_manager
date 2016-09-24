@@ -4,7 +4,12 @@
   <% @day.activities.each do |activity| %>
     <li><h4><div class="list_item">
       <%= activity.activity %> |
-      <%= link_to "This Activity", edit_day_activity_path(@day, activity) %> |
+      <%= link_to "This Activity", new_activity_tag_path(@day, activity) %> |
+      <% if activity.tags %>
+        <%= activity.tags.each do |tag| %>
+          <%= tag.name %>
+        <% end %>
+      <% end %>
     </div></h4></li>
   <% end %>
 </ul>

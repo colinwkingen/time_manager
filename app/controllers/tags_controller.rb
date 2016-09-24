@@ -9,11 +9,11 @@ class TagsController < ApplicationController
   end
 
   def new
+    @activity = Activity.find(params[:activity_id])
     @tag = Tag.new
   end
 
   def create
-
     @activity = Activity.find(params[:activity_id])
     @tag = @activity.tags.new(tag_params)
     if @tag.save

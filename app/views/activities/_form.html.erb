@@ -2,8 +2,8 @@
 
 
   <% if @day.activities.length < 24 %>
-    <h5>There are <%= @day.activities.length %> activities accounted for.</h5>
-    <%= form_for [@day, @activity] do |f| %>
+    <h5>There are <%= @day.activities.length %> activities currently logged.</h5>
+    <%= form_for [@activity, @tag] do |f| %>
       <%= f.label :activity %>
 
 
@@ -12,7 +12,7 @@
       <%= f.select :activity, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
 
 
-      <p><%= f.submit 'Add A Tag', class: "btn btn-default field" %></p>
+      <p><%= f.submit 'Add A Tag', class: "btn btn-default field", :data => { :method => 'patch'} %></p>
     <% end %>
   <% else %>
     <h4>All activities in this day are accounted for!</h4>
