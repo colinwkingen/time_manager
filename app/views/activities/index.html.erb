@@ -1,10 +1,10 @@
-<h1><%= @day.date %></h1>
+ <h1><%= @day.date %></h1>
 
 <ul class="list">
   <% @day.activities.each do |activity| %>
     <li><h4><div class="list_item">
       <%= activity.activity %> |
-      <%= link_to "This Activity", new_activity_tag_path(@day, activity) %> |
+      <%= link_to "This Activity", new_day_activity_path(@day, activity) %> |
       <% if activity.tags %>
         <%= activity.tags.each do |tag| %>
           <%= tag.name %>

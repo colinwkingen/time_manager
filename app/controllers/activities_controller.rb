@@ -36,7 +36,7 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
-    @day = Day.find(params[:day_id])
+    @day = @activity.day
     if @activity.update(activity_params)
       flash[:success] = "Activity Changed"
       redirect_to day_path(@day)

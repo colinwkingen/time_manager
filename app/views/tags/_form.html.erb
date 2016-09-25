@@ -6,6 +6,22 @@
   <p><%= f.submit class: "btn btn-default field" %></p>
 
 <% end %>
+
+<%= form_for [@activity] do |f| %>
+  <%= f.label :tags %>
+
+
+
+  <% tags = options_from_collection_for_select(@tags,'name', 'name') %>
+  <%= f.select :tags, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
+
+
+  <p><%= f.submit 'Select a tag', class: "btn btn-default field", :data => { :method => 'patch'} %></p>
+<% end %>
+
+
+
+
 <div class="col-lg-6">
   <h3>Current Added Tags</h3>
   <ul id="tag-list">
