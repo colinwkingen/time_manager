@@ -1,15 +1,10 @@
 
 
-<%= form_for [@activity] do |f| %>
-  <%= f.label :tags %>
-
-
-
+<%= form_for [@activity, @tag], remote: true do |f| %>
+  <%= f.label :name %>
   <% tags = options_from_collection_for_select(@tags,'name', 'name') %>
-  <%= f.select :tags, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
-
-
-  <p><%= f.submit 'Select a tag', class: "btn btn-default field", :data => { :method => 'patch'} %></p>
+  <%= f.select :name, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
+  <p><%= f.submit 'Select a tag', class: "btn btn-default field" %></p>
 <% end %>
 
 

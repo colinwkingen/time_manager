@@ -5,10 +5,11 @@
     <li><h4><div class="list_item">
       <%= link_to activity.activity, edit_day_activity_path(@day, activity) %> |
         Tags:
-        <%= activity.tags.each do |tag| %>
-          <p>Ding!</p>
+
+        <% activity.tags.each do |tag| %>
           <%= tag.name %>
         <% end %>
+
     </div></h4></li>
   <% end %>
 </ul>
