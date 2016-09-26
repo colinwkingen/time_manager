@@ -2,6 +2,7 @@ class ActivitiesController < ApplicationController
 
   def index
     @day = Day.find(params[:day_id])
+    @activities = @day.activities
   end
 
   def show
@@ -39,7 +40,7 @@ class ActivitiesController < ApplicationController
     @day = @activity.day
     if @activity.update(activity_params)
       flash[:success] = "Activity Changed"
-      redirect_to day_path(@day)
+      redirect_to day_activities_path(@activity.day)
     else
       render :edit
     end

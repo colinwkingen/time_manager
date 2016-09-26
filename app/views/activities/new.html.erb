@@ -8,5 +8,16 @@
 
     <%= render('tags/form') %>
 
+
+    <%= form_for [ @activity, @tag ], remote: true do |f| %>
+
+
+      <%= f.label :name %>
+      <%= f.text_field  :name %>
+      <p><%= f.submit class: "btn btn-default field" %></p>
+
+    <% end %>
+
+
   </div>
 </div>

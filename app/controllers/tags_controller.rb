@@ -10,7 +10,7 @@ class TagsController < ApplicationController
 
   def new
     @activity = Activity.find(params[:activity_id])
-    @tag = Tag.new
+    @tag = @activity.tags.new
   end
 
   def create

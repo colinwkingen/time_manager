@@ -1,15 +1,14 @@
  <h1><%= @day.date %></h1>
 
 <ul class="list">
-  <% @day.activities.each do |activity| %>
+  <% @activities.each do |activity| %>
     <li><h4><div class="list_item">
-      <%= activity.activity %> |
-      <%= link_to "This Activity", new_day_activity_path(@day, activity) %> |
-      <% if activity.tags %>
+      <%= link_to activity.activity, edit_day_activity_path(@day, activity) %> |
+        Tags:
         <%= activity.tags.each do |tag| %>
+          <p>Ding!</p>
           <%= tag.name %>
         <% end %>
-      <% end %>
     </div></h4></li>
   <% end %>
 </ul>
@@ -19,7 +18,7 @@
     <p><%= link_to "Add Activity", new_day_activity_path(@day), class: "btn btn-default field" %></p>
   </div>
   <div class="col-xl-2">
-    <p><%= link_to "Back", days_path, class: "btn btn-default field" %></p>
+    <p><%= link_to "Back", days_path(@day), class: "btn btn-default field" %></p>
   </div>
   <div class="col-xl-2">
     <p><%= link_to "Delete", day_path(@day),
