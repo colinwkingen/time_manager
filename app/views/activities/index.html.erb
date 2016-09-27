@@ -3,7 +3,7 @@
 <ul class="list">
   <% @activities.each do |activity| %>
     <li><h4><div class="list_item">
-      <%= link_to activity.activity, edit_day_activity_path(@day, activity) %> |
+      <%= link_to activity.activity, edit_activity_path(activity) %> |
         Tags:
 
         <% activity.tags.each do |tag| %>
