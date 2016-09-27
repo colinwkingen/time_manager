@@ -1,27 +1,23 @@
  <h1><%= @day.date %></h1>
 
-<ul class="list">
+<div class="list row">
   <% @activities.each do |activity| %>
-    <li><h4><div class="list_item">
-      <%= link_to activity.activity, edit_activity_path(activity) %> |
-        Tags:
-
-        <% activity.tags.each do |tag| %>
-          <%= tag.name %>
-        <% end %>
-
-    </div></h4></li>
+    <div class="col-md-6">
+      <li><h4><div class="list_item">
+        Lack of tag.
+        <%= activity.activity %>
+      </div></h4></li>
+    </div>
   <% end %>
-</ul>
+</div>
 
 <div class="row">
   <div class="col-xl-2">
-    <p><%= link_to "Add Activity", new_day_activity_path(@day), class: "btn btn-default field" %></p>
   </div>
-  <div class="col-xl-2">
+  <div class="col-xl-4">
     <p><%= link_to "Back", days_path(@day), class: "btn btn-default field" %></p>
   </div>
-  <div class="col-xl-2">
+  <div class="col-xl-4">
     <p><%= link_to "Delete", day_path(@day),
              :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
   </div>

@@ -13,8 +13,6 @@ class ActivitiesController < ApplicationController
   def new
     @day = Day.find(params[:day_id])
     @activity = @day.activities.create({activity: "Entry Not Named"})
-    @tags = Tag.all
-    @tag= Tag.new
   end
 
   def create
@@ -32,7 +30,6 @@ class ActivitiesController < ApplicationController
   def edit
     @activity = Activity.find(params[:id])
       @day = @activity.day
-    @tags = Tag.all
   end
 
   def update

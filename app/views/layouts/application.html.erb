@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Activityglass</title>
+    <title>CodeWatch</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -15,7 +15,7 @@
           <!-- <a class="navbar-brand" href="#">
             <p>Activityglass</p>
           </a> -->
-          <%= link_to "Activityglass", root_path, class: 'navbar-brand' %>
+          <%= link_to "CodeWatch", root_path, class: 'navbar-brand' %>
         </div>
         <ul class="nav navbar-nav">
 
@@ -23,7 +23,7 @@
             <li><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
             <li><%= link_to "Log a Day", new_day_path %></li>
-
+            <li><%= link_to "Add Activity", new_day_activity_path(@day) %></li>
           <% else %>
             <li><%= link_to "Sign In", user_session_path, id: 'signin' %></li>
             <li><%= link_to "Sign Up", new_user_registration_path %></li>
