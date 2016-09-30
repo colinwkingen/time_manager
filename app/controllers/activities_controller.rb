@@ -27,6 +27,12 @@ class ActivitiesController < ApplicationController
     end
   end
 
+  def destroy
+    @activity = Activity.find(params[:id])
+    @activity.destroy
+    redirect_to day_activities_path
+  end
+
   def edit
     @activity = Activity.find(params[:id])
       @day = @activity.day
