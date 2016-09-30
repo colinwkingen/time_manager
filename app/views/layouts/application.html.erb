@@ -23,7 +23,6 @@
             <li><%= link_to "Edit Profile", edit_user_registration_path(current_user) %></li>
             <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
             <li><%= link_to "Log a Day", new_day_path %></li>
-            <li><%= link_to "Add Activity", new_day_activity_path(@day) %></li>
           <% else %>
             <li><%= link_to "Sign In", user_session_path, id: 'signin' %></li>
             <li><%= link_to "Sign Up", new_user_registration_path %></li>

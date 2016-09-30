@@ -13,6 +13,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'minitest-rails'
 gem 'devise'
 gem 'poltergeist'
+gem 'gibbon'
 
 # minitest rails drops the test db after each rspec run
 # it is enabled in the test_helper.rb by changing minitest/autorun
