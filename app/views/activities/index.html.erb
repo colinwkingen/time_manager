@@ -1,0 +1,25 @@
+ <h1 class="page-header"><%= @day.date %></h1>
+
+<div class="list row">
+  <% @activities.each do |activity| %>
+    <div class="col-md-6">
+      <li><h4><div class="list_item">
+
+        <%= activity.name %>
+      </div></h4></li>
+    </div>
+  <% end %>
+</div>
+
+<div class="row">
+  <div class="col-sm-2">
+    <p><%= link_to "Add Activity", new_day_activity_path(@day), class: "btn btn-default field" %></p>
+  </div>
+  <div class="col-sm-2">
+    <p><%= link_to "Back", days_path(@day), class: "btn btn-default field" %></p>
+  </div>
+  <div class="col-sm-2">
+    <p><%= link_to "Delete", day_path(@day),
+             :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
+  </div>
+</div>

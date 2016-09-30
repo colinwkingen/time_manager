@@ -6,7 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
-Tag.create({name: 'Cook'})
-Tag.create({name: 'Clean'})
-Tag.create({name: 'Read'})
+Activity.create(name: 'Coding')
+Activity.create(name: 'Research')
+Activity.create(name: 'Debugging')
+Activity.create(name: 'Testing')
+Activity.create(name: 'Client Interaction')
+Activity.create(name: 'Coworker Interaction')

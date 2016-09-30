@@ -1,5 +1,10 @@
 class ActivitiesController < ApplicationController
 
+  def index
+    @day = Day.find(params[:day_id])
+    @activities = @day.activities
+  end
+
   def show
     @activities = Activity.all
   end
@@ -7,9 +12,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @day = Day.find(params[:day_id])
-    @activity = @day.activities.create({activity: "Void"})
-    @tags = Tag.all
-    @tag= Tag.new
+    @activity = @day.activities.create({name: "Entry Not Named"})
   end
 
   def create
@@ -24,18 +27,23 @@ class ActivitiesController < ApplicationController
     end
   end
 
-  def edit
-    @tags = Tag.all
+  def destroy
     @activity = Activity.find(params[:id])
-    @day = Day.find(params[:day_id])
+    @activity.destroy
+    redirect_to day_activities_path
+  end
+
+  def edit
+    @activity = Activity.find(params[:id])
+    @day = @activity.day
   end
 
   def update
     @activity = Activity.find(params[:id])
-    @day = Day.find(params[:day_id])
+    @day = @activity.day
     if @activity.update(activity_params)
       flash[:success] = "Activity Changed"
-      redirect_to day_path(@day)
+      redirect_to day_activities_path(@activity.day)
     else
       render :edit
     end
@@ -43,6 +51,6 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:activity)
+    params.require(:activity).permit(:name)
   end
 end

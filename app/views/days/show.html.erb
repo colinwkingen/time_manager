@@ -3,8 +3,8 @@
 <ul class="list">
   <% @day.activities.each do |activity| %>
     <li><h4><div class="list_item">
-      <%= activity.activity %> |
-      <%= link_to "This Activity", edit_day_activity_path(@day, activity) %> |
+      <%= activity.name %> |
+      <%= link_to "This Activity", new_activity_tag_path(@day, activity) %> |
     </div></h4></li>
   <% end %>
 </ul>
@@ -14,10 +14,12 @@
     <p><%= link_to "Add Activity", new_day_activity_path(@day), class: "btn btn-default field" %></p>
   </div>
   <div class="col-xl-2">
-    <p><%= link_to "Back", days_path, class: "btn btn-default field" %></p>
+    <p><%= link_to "Back", day_path(@day), class: "btn btn-default field" %></p>
   </div>
   <div class="col-xl-2">
     <p><%= link_to "Delete", day_path(@day),
              :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
   </div>
 </div>
+
+<h1>This is an old shitty route that will disappear soon! Check your path, man!</h1>

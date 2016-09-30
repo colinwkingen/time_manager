@@ -2,22 +2,19 @@
 
 
   <% if @day.activities.length < 24 %>
-    <h5>There are <%= @day.activities.length %> activities accounted for.</h5>
+    <h5>There are <%= @day.activities.length %> activities currently logged.</h5>
     <%= form_for [@day, @activity] do |f| %>
-      <%= f.label :activity %>
+      <%= f.label :name, class: 'devise-labels' %>
 
 
 
-      <% tags = options_from_collection_for_select(@tags,'name', 'name') %>
-      <%= f.select :activity, tags, id: "drop_down", :prompt => '-Select a Tag to Add-' %>
+
+      <%= f.text_field :name %>
 
 
-      <p><%= f.submit 'Add A Tag', class: "btn btn-default field" %></p>
+      <p><%= f.submit 'Set Activity Name', class: "btn btn-default field", :data => { :method => 'patch'} %></p>
     <% end %>
-  <% else %>
-    <h4>All activities in this day are accounted for!</h4>
-    <h4>Alter an activity, or rethink your understanding of time.</h4>
   <% end %>
 
-
-  <%= link_to "Back", day_path(@day), class: "btn btn-default field" %>
+  <%= link_to "Cancel", day_activity_path(@day, @activity),
+           :data => { :method => "delete"}, class: "btn btn-default field"  %>
