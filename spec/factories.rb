@@ -21,11 +21,7 @@ FactoryGirl.define do
   end
 
   factory(:activity) do
-    activity('Afternoon')
+    name('Coding')
     day
-  end
-
-  factory(:tag) do
-    name('Baking Cupcakes')
   end
 end

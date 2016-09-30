@@ -3,8 +3,8 @@
 
   <% if @day.activities.length < 24 %>
     <h5>There are <%= @day.activities.length %> activities currently logged.</h5>
-    <%= form_for [@activity] do |f| %>
-      <%= f.label :name %>
+    <%= form_for [@day, @activity] do |f| %>
+      <%= f.label :name, class: 'devise-labels' %>
 
 
 

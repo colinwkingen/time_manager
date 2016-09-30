@@ -7,10 +7,4 @@ Rails.application.routes.draw do
     resources :activities
   end
 
-  resources :activities do
-    resources :tags
-  end
-
-  resources :tags
-
 end
