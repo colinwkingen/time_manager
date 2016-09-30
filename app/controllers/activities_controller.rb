@@ -35,7 +35,7 @@ class ActivitiesController < ApplicationController
 
   def edit
     @activity = Activity.find(params[:id])
-      @day = @activity.day
+    @day = @activity.day
   end
 
   def update
