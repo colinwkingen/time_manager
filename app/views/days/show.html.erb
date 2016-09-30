@@ -3,7 +3,7 @@
 <ul class="list">
   <% @day.activities.each do |activity| %>
     <li><h4><div class="list_item">
-      <%= activity.activity %> |
+      <%= activity.name %> |
       <%= link_to "This Activity", new_activity_tag_path(@day, activity) %> |
     </div></h4></li>
   <% end %>
@@ -22,4 +22,4 @@
   </div>
 </div>
 
-<h1>This is probably an old shitty route! Check your path, man!</h1>
+<h1>This is an old shitty route that will disappear soon! Check your path, man!</h1>

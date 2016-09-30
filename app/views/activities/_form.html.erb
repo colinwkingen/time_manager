@@ -4,12 +4,12 @@
   <% if @day.activities.length < 24 %>
     <h5>There are <%= @day.activities.length %> activities currently logged.</h5>
     <%= form_for [@activity] do |f| %>
-      <%= f.label :activity %>
+      <%= f.label :name %>
 
 
 
 
-      <%= f.text_field :activity %>
+      <%= f.text_field :name %>
 
 
       <p><%= f.submit 'Update Activity Name', class: "btn btn-default field", :data => { :method => 'patch'} %></p>

@@ -1,6 +1,6 @@
 class Activity < ActiveRecord::Base
   belongs_to :day
-  validates :activity, :presence => true
+  validates :name, :presence => true
 
 
   def check_validity
