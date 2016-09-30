@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+
+  before_create :add_to_mailchimp
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
