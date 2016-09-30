@@ -23,6 +23,7 @@ maybe you should just allow the user to add a day with a title from the main vie
 * You should be able to choose from available activities in a dropdown
 * You should be able to see all time percentages on a dashboard
 ### User Stories
+
 * I want tp be able to log in to a personal account for my time management.
 * I want to see that i'm logged in on a nav bar
 * I want to be able to add days to the log
@@ -32,8 +33,6 @@ maybe you should just allow the user to add a day with a title from the main vie
 * I want to be able to remove a period of activity, and have the app confirm it.
 * I want to be able to compare the time I spend on an activity to the user average.
 
-
-
 ## Setup/Installation Requirements
 
 * Clone the repo from github
@@ -41,6 +40,11 @@ maybe you should just allow the user to add a day with a title from the main vie
 * Make sure you have the node.js environment, rails 5 and activerecord installed.
 * Run $rails db:create
 * Run $rails db:migrate
+* Run $rails db:seed
+* create a Mailchimp account
+* get an API key from Mailchimp
+* create a .env file in the project root directory and add
+MAILCHIMP_API_KEY=(Your api key)
 * Run the rails server with $rails s
 * Navigate to http://localhost:3000
 
