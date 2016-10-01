@@ -1,13 +1,14 @@
 <div class="col-md-6">
   <li><h4><div class="list_item">
 
-    <%= Activity.last.name %>
-
-
-
-    <%= form_for [ Activity.last ] do |f| %>
-        <% f.hidden_field :start_time, value: Time.now %>
-      <p><%= f.submit 'Start Time', class: "btn btn-default field", :data => { :method => 'patch'} %></p>
+    <%= form_for [ @day, activity ] do |f| %>
+          <% f.hidden_field :start_time, value: Time.now %>
+      <%= f.submit 'Start Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
     <% end %>
+    <%= form_for [ @day, activity ] do |f| %>
+          <% f.hidden_field :start_time, value: Time.now %>
+      <%= f.submit 'End Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
+    <% end %>
+
   </div></h4></li>
 </div>
