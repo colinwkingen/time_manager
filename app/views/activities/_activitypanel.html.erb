@@ -5,16 +5,17 @@
 
 
 
-    <%= form_for [ day, activity ] do |f| %>
+    <%= form_for [ day, activity ], remote: true do |f| %>
           <%= f.hidden_field :start_time, value: Time.now %>
           <%= f.hidden_field :end_time, value: "" %>
-      <%= f.submit 'Start Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
+      <%= f.submit 'Start Time', class: "start-button btn btn-default field", :data => { :method => 'patch'} %>
     <% end %>
-    <%= form_for [ day, activity ] do |f| %>
+    <%= form_for [ day, activity ], remote: true do |f| %>
           <%= f.hidden_field :start_time, value: "" %>
           <%= f.hidden_field :end_time, value: Time.now %>
-      <%= f.submit 'End Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
+      <%= f.submit 'End Time', class: "stop-button btn btn-default field", :data => { :method => 'patch'} %>
     <% end %>
+    <h4><%= activity.start_time %></h4>
 
   </div></h4></li>
 </div>
