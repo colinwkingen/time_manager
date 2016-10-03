@@ -8,7 +8,9 @@
 
         <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
 
-        <div class="timer-color pull-right">
+        <div class="timer-stopped on_indicator<%= activity.id %> pull-right">
+        </div>
+        <div class="timer-running off_indicator<%= activity.id %> pull-right">
         </div>
 
       </div></h4>
