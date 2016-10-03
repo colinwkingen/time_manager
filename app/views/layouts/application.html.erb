@@ -24,17 +24,17 @@
             <li><%= link_to "Sign In", user_session_path, id: 'signin' %></li>
             <li><%= link_to "Sign Up", new_user_registration_path %></li>
           <% end %>
-          <li>
-            <div class="flashes">
+
+        </ul>
+        <% if current_user %>
+          <div>
+            <p class="navbar-text navbar-center nav_user flash-all">
               <%= flash[:success] %>
               <%= flash[:failure] %>
               <%= flash[:notice] %>
               <%= flash[:alert] %>
-            </div>
-          </li>
-
-        </ul>
-        <% if current_user %>
+            </p>
+          </div>
           <p class="navbar-text navbar-right nav_user">Signed in as <a href="#" class="navbar-link"><%= current_user.name %></a></p>
         <% else %>
           <p class="navbar-text navbar-right nav_user">Not Logged In</p>
@@ -42,12 +42,6 @@
       </div>
     </nav>
     <div class="container">
-      <div class="flashes">
-        <%= flash[:success] %>
-        <%= flash[:failure] %>
-        <%= flash[:notice] %>
-        <%= flash[:alert] %>
-      </div>
       <%= yield %>
     </div>
   </body>
