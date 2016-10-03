@@ -24,6 +24,8 @@ body {
 .btn {
   width: 150px;
   margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #222;
   color: white;
 }
@@ -44,4 +46,11 @@ body {
 
 option, select, form {
   color: black;
+}
+
+.timer-color {
+  height: 70px;
+  width: 70px;
+  margin-top: 18px;
+  background-color: #A00;
 }

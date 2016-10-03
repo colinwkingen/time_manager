@@ -6,18 +6,14 @@
       <li><h4><div class="list_item">
         <%= activity.name %>
 
-        <%= form_for [ @day, activity ] do |f| %>
-              <%= f.hidden_field :start_time, value: Time.now %>
-              <%= f.hidden_field :end_time, value: "" %>
-          <%= f.submit 'Start Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
-        <% end %>
-        <%= form_for [ @day, activity ] do |f| %>
-              <%= f.hidden_field :start_time, value: "" %>
-              <%= f.hidden_field :end_time, value: Time.now %>
-          <%= f.submit 'End Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
-        <% end %>
+        <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
 
-      </div></h4></li>
+        <div class="timer-color pull-right">
+        </div>
+
+      </div></h4>
+
+    </li>
     </div>
   <% end %>
 </div>
