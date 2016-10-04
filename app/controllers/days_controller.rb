@@ -18,6 +18,7 @@ class DaysController < ApplicationController
     if @day.save
       flash[:success] = "Day Added"
       redirect_to  days_path
+      binding.pry
     else
       render :new
     end
