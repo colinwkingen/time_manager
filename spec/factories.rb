@@ -8,11 +8,6 @@ FactoryGirl.define do
     password "foobar"
 
   end
-  # factory(:user) do
-  #   name('Tom Sellec')
-  #   email('tom@sellec.com')
-  #   password('goodpassword1')
-  # end
 
   factory(:day) do
     datefield('03/24/1985')
