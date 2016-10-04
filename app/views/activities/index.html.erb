@@ -4,13 +4,14 @@
   <% @activities.each do |activity| %>
     <div class="col-md-6">
       <li><h4><div class="list_item">
-        <%= activity.name %>
 
         <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
 
-        <div class="timer-stopped on_indicator<%= activity.id %> pull-right">
+        <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
+          <h3 class="button-text" >OFF</h3>
         </div>
-        <div class="timer-running off_indicator<%= activity.id %> pull-right">
+        <div class="timer-running on_indicator<%= activity.id %> pull-right">
+          <h3 class="button-text" >ON</h3>
         </div>
 
       </div></h4>

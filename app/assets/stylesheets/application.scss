@@ -44,6 +44,10 @@ body {
   margin-right: 15px;
 }
 
+.button-text {
+  text-align: center;
+}
+
 option, select, form {
   color: black;
 }
@@ -53,6 +57,8 @@ option, select, form {
   width: 70px;
   margin-top: 18px;
   background-color: #A00;
+  border-radius: 10%;
+  color: black;
 }
 
 .timer-running {
@@ -61,6 +67,8 @@ option, select, form {
   margin-top: 18px;
   background-color: #0A0;
   display: none;
+  border-radius: 10%;
+  color: white;
 }
 
 
