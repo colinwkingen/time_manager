@@ -43,7 +43,10 @@ class ActivitiesController < ApplicationController
     @day = @activity.day
     if @activity.update(activity_params)
       flash[:success] = "Activity Changed"
-      redirect_to day_activities_path(@activity.day)
+      respond_to do |format|
+        format.html { redirect_to day_activities_path(@activity.day) }
+        format.js
+      end
     else
       render :edit
     end
@@ -51,6 +54,6 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:name)
+    params.require(:activity).permit(:name, :start_time, :end_time )
   end
 end

@@ -4,18 +4,19 @@
   <% @activities.each do |activity| %>
     <div class="col-md-6">
       <li><h4><div class="list_item">
-        <%= activity.name %>
 
-        <%= form_for [ @day, activity ] do |f| %>
-              <% f.hidden_field :start_time, value: Time.now %>
-          <%= f.submit 'Start Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
-        <% end %>
-        <%= form_for [ @day, activity ] do |f| %>
-              <% f.hidden_field :start_time, value: Time.now %>
-          <%= f.submit 'End Time', class: "btn btn-default field", :data => { :method => 'patch'} %>
-        <% end %>
+        <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
 
-      </div></h4></li>
+        <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
+          <h3 class="button-text" >OFF</h3>
+        </div>
+        <div class="timer-running on_indicator<%= activity.id %> pull-right">
+          <h3 class="button-text" >ON</h3>
+        </div>
+
+      </div></h4>
+
+    </li>
     </div>
   <% end %>
 </div>

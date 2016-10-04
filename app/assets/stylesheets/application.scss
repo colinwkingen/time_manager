@@ -24,6 +24,8 @@ body {
 .btn {
   width: 150px;
   margin: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   background-color: #222;
   color: white;
 }
@@ -42,6 +44,35 @@ body {
   margin-right: 15px;
 }
 
+.button-text {
+  text-align: center;
+}
+
 option, select, form {
   color: black;
+}
+
+.timer-stopped {
+  height: 70px;
+  width: 70px;
+  margin-top: 18px;
+  background-color: #A00;
+  border-radius: 10%;
+  color: black;
+}
+
+.timer-running {
+  height: 70px;
+  width: 70px;
+  margin-top: 18px;
+  background-color: #0A0;
+  display: none;
+  border-radius: 10%;
+  color: white;
+}
+
+
+
+.end-button {
+  display: none;
 }

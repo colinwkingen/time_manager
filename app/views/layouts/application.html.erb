@@ -27,6 +27,14 @@
 
         </ul>
         <% if current_user %>
+          <div>
+            <p class="navbar-text navbar-center nav_user">
+              <%= flash[:success] %>
+              <%= flash[:failure] %>
+              <%= flash[:notice] %>
+              <%= flash[:alert] %>
+            </p>
+          </div>
           <p class="navbar-text navbar-right nav_user">Signed in as <a href="#" class="navbar-link"><%= current_user.name %></a></p>
         <% else %>
           <p class="navbar-text navbar-right nav_user">Not Logged In</p>
@@ -34,12 +42,6 @@
       </div>
     </nav>
     <div class="container">
-      <div class="flashes">
-        <%= flash[:success] %>
-        <%= flash[:failure] %>
-        <%= flash[:notice] %>
-        <%= flash[:alert] %>
-      </div>
       <%= yield %>
     </div>
   </body>
