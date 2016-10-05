@@ -5,9 +5,8 @@ class Activity < ActiveRecord::Base
 
   def return_time
     minutes = self.total_time / 60
-    hours = minutes / 60
-    seconds = self.total_time - ( hours * 180 )
+    hours = minutes % 60
+    seconds = self.total_time % 60
     return [seconds, minutes, hours]
   end
-
 end
