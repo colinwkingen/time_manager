@@ -41,7 +41,7 @@ class ActivitiesController < ApplicationController
   def update
     @activity = Activity.find(params[:id])
     @day = @activity.day
-    if params[:commit].eql? "End Time"
+    if params[:commit].eql? 'End Time'
       @new_total = (@activity.total_time += TimeDifference.between(@activity.updated_at, Time.now).in_seconds.to_i)
     else
       @new_total = @activity.total_time

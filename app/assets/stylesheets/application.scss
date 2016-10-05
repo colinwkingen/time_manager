@@ -72,7 +72,13 @@ option, select, form {
   color: white;
 }
 
-
+.minute-tick {
+  width: 2px;
+  height: 30px;
+  margin: 1px;
+  background-color: #22B;
+  display: inline-block;
+}
 
 .end-button {
   display: none;
