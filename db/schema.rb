@@ -10,26 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160930175713) do
+ActiveRecord::Schema.define(version: 20161004222924) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "day_id"
     t.integer  "start_time"
     t.integer  "end_time"
+    t.integer  "total_time", default: 0
   end
 
   create_table "days", force: :cascade do |t|
     t.string   "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "datefield"
     t.integer  "user_id"
+    t.date     "datefield"
   end
 
   create_table "users", force: :cascade do |t|

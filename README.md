@@ -10,6 +10,31 @@ This is the beginning of a time tracking app in Ruby on Rails, using Postgres.
 
 ### Bug Hunting
 
+[:ajd,
+ :amjd,
+ :mjd,
+ :ld,
+ :day_fraction,
+ :cwyear,
+ :cweek,
+ :cwday,
+ :julian?,
+ :gregorian?,
+ :new_start,
+ :italy,
+ :england,
+ :julian,
+ :gregorian,
+ :next_day,
+ :prev_day,
+ :start,
+ :next_month,
+ :prev_month,
+ :next_year,
+ :prev_year,
+ :to_time,
+
+
 for creating new tags in the create activity view without rendering new view:
 activity did not exist so we create an activity when the new route is reached
 further tag additions will need to use the update routes

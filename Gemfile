@@ -15,6 +15,7 @@ gem 'devise'
 gem 'poltergeist'
 gem 'gibbon'
 gem 'dotenv-rails'
+gem 'time_difference'
 
 # minitest rails drops the test db after each rspec run
 # it is enabled in the test_helper.rb by changing minitest/autorun
@@ -29,6 +30,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
+  gem 'rubocop', '~> 0.43.0', require: false
 end
 
 group :test do

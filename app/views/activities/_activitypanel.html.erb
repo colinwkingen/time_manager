@@ -3,7 +3,6 @@
     <div class="list_item">
 
       <%= activity.name %>
-
       <div class="switch_activity<%= activity.id %>" >
         <%= form_for [ day, activity ], remote: true do |f| %>
               <%= f.hidden_field :start_time, value: Time.now %>

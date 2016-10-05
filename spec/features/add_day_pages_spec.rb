@@ -2,12 +2,11 @@ require 'rails_helper'
 require 'devise'
 
 describe 'the view and add day process' do
-
   before do
-    user = FactoryGirl.create(:user, :email => "mail@mail.mail")
-    day = FactoryGirl.create(:day, :user_id => user.id)
-    activity = FactoryGirl.create(:activity, :day_id => day.id)
-    login_as(user, :scope => :user, :run_callbacks => false)
+    user = FactoryGirl.create(:user, email: "mail@mail.mail")
+    day = FactoryGirl.create(:day, user_id: user.id)
+    activity = FactoryGirl.create(:activity, day_id: day.id)
+    login_as(user, scope: :user, run_callbacks: false)
   end
 
   it 'takes you to a page where you can add a day to the list' do
@@ -20,7 +19,7 @@ describe 'the view and add day process' do
   it 'takes you to a page where you can add a specific date to the list' do
     visit days_path
     click_link 'Log a Day'
-    select 'Saturday', :from => 'Date'
+    select 'Saturday', from:  'Date'
     fill_in 'Datefield', :with => '03/24/1985'
     click_on 'Create Day'
     expect(page).to have_content 'Saturday'
@@ -38,8 +37,8 @@ describe 'the view and add day process' do
   it 'takes you to a page where you can add a day to the list' do
     visit days_path
     click_link 'Log a Day'
-    select 'Friday', :from => 'Date'
-    fill_in 'Datefield', :with => '03/24/1985'
+    select 'Friday', from: 'Date'
+    fill_in 'Datefield', with: '03/24/1985'
     click_on 'Create Day'
     click_link 'Friday'
     expect(page).to have_content 'Friday'

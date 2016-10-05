@@ -1,10 +1,11 @@
- <h1 class="page-header"><%= @day.date %> - <%= @day.datefield %></h1>
+ <h1 class="page-header"><%= @day.date %> - <%= @day.datefield.day %> / <%= @day.datefield.month %> / <%= @day.datefield.year %></h1>
 
 <div class="list row">
   <% @activities.each do |activity| %>
     <div class="col-md-6">
       <li><h4><div class="list_item">
 
+        <h4>Time Spent: <p class="total_time<%= activity.id %>"><%= activity.return_time[2] %>Hr : <%= activity.return_time[1] %>Min : <%= activity.return_time[0] %>S</p></h4>
         <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
 
         <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
@@ -20,7 +21,7 @@
     </div>
   <% end %>
 </div>
-
+<hr>
 <div class="row">
   <div class="col-sm-2">
     <p><%= link_to "Add Activity", new_day_activity_path(@day), class: "btn btn-default field" %></p>
@@ -33,3 +34,4 @@
              :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
   </div>
 </div>
+<%= render partial: "totalbar", locals: { day: @day } %>

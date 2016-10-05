@@ -41,7 +41,12 @@ class ActivitiesController < ApplicationController
   def update
     @activity = Activity.find(params[:id])
     @day = @activity.day
-    if @activity.update(activity_params)
+    if params[:commit].eql? 'End Time'
+      @new_total = (@activity.total_time += TimeDifference.between(@activity.updated_at, Time.now).in_seconds.to_i)
+    else
+      @new_total = @activity.total_time
+    end
+    if @activity.update(activity_params) && @activity.update({total_time: @new_total })
       flash[:success] = "Activity Changed"
       respond_to do |format|
         format.html { redirect_to day_activities_path(@activity.day) }
