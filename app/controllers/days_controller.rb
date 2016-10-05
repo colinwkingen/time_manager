@@ -1,5 +1,4 @@
 class DaysController < ApplicationController
-
   def index
     @days = Day.all
   end
@@ -16,9 +15,8 @@ class DaysController < ApplicationController
     @day = Day.new(day_params)
     @day.user_id = current_user.id
     if @day.save
-      flash[:success] = "Day Added"
-      redirect_to  days_path
-      binding.pry
+      flash[:success] = 'Day Added'
+      redirect_to days_path
     else
       render :new
     end
@@ -31,7 +29,7 @@ class DaysController < ApplicationController
   def update
     @day = Day.find(params[:id])
     if @day.update(day_params)
-      flash[:success] = "Day Updated"
+      flash[:success] = 'Day Updated'
       redirect_to days_path
     else
       render :edit
@@ -45,6 +43,7 @@ class DaysController < ApplicationController
   end
 
   private
+  
   def day_params
     params.require(:day).permit(:date, :datefield)
   end

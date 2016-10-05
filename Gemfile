@@ -30,6 +30,7 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'simplecov', require: false
+  gem 'rubocop', '~> 0.43.0', require: false
 end
 
 group :test do

@@ -5,7 +5,7 @@
     <div class="col-md-6">
       <li><h4><div class="list_item">
 
-        <h4>Time Spent Hr:Min:Sec <p class="total_time<%= activity.id %>"><%= activity.return_time[0] %>:<%= activity.return_time[1] %>:<%= activity.return_time[2] %></p></h4>
+        <h4>Time Spent: <p class="total_time<%= activity.id %>"><%= activity.return_time[2] %>Hr : <%= activity.return_time[1] %>Min : <%= activity.return_time[0] %>S</p></h4>
         <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
 
         <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
