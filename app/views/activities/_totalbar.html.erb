@@ -1,7 +1,8 @@
 
 <% @day.activities.each do |activity| %>
+  <br>
   <% for i in 0..activity.total_time do %>
-    <%= activity.name %>
-    <div class="minute-tick" style="background-color:#<%= activity.color %>;">|</div>
+    <div class="minute-tick" style="background-color:#<%= activity.color %>;"></div>
   <% end %>
+  <label class="pull-right"><%= activity.name %></label>
 <% end %>
