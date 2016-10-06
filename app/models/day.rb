@@ -9,11 +9,11 @@ class Day < ActiveRecord::Base
 
 
   def create_defaults
-    self.activities.create(name: 'Coding')
-    self.activities.create(name: 'Research')
-    self.activities.create(name: 'Debugging')
-    self.activities.create(name: 'Testing')
-    self.activities.create(name: 'Client Interaction')
-    self.activities.create(name: 'Coworker Interaction')
+    self.activities.create(name: 'Coding', color: 'B00')
+    self.activities.create(name: 'Research', color: '0B0')
+    self.activities.create(name: 'Debugging', color: '00B')
+    self.activities.create(name: 'Testing', color: 'AA0')
+    self.activities.create(name: 'Client Interaction', color: '0AA')
+    self.activities.create(name: 'Coworker Interaction', color: 'A0A')
   end
 end
