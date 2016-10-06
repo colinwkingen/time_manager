@@ -1,11 +1,12 @@
 
 <% @day.activities.each do |activity| %>
 
-  <% if activity.percentage.is_a? Integer %>
+  <% if activity.total_time != 0 %>
 
     <br>
     <p>
       <label class="pull-right"><%= activity.name %> - <%= activity.percentage %>%</label>
+    <br>
     </p>
     <% for i in 0..activity.percentage do %>
       <div class="minute-tick" style="background-color:#<%= activity.color %>;"></div>

@@ -1,7 +1,7 @@
 class Activity < ActiveRecord::Base
   belongs_to :day
   validates :name, :presence => true
-  default_scope {order('created_at DESC')}
+  default_scope {order('id ASC')}
 
 
   def return_time
@@ -17,7 +17,7 @@ class Activity < ActiveRecord::Base
       @total += (activity.total_time * 10).to_f
     end
     if @total < 1
-      return 
+      return
     else
       @this_total = ( self.total_time * 10 ).to_f
       return ((@this_total / @total).round(2) * 100).to_i

@@ -3,4 +3,5 @@ $(".on_indicator<%= @activity.id %>").toggle();
 $('.switch_activity<%= @activity.id %>').toggle();
 $('.switch_indicator<%= @activity.id %>').toggle();
 $('.total_time<%= @activity.id %>').html('<%= @activity.return_time[2] %>Hr : <%= @activity.return_time[1] %>Min : <%= @activity.return_time[0] %>S');
+
 $("#totalbar").html('<%= j render partial: "totalbar", locals: { day: @day } %>');

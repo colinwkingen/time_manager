@@ -1,15 +1,27 @@
 
 <% if current_user %>
   <h2>Your Dashboard</h2>
-  <ul>
-    <% current_user.days.all.each do |day| %>
-      <li class="list"><h4><div class="list_item">
-        <p><%= link_to day.date, day_activities_path(day) %>
-         Date: <%= day.datefield %></p>
-      </div></h4></li>
-    <% end %>
-  </ul>
 
+  <div class="row">
+
+    <div class="col-xs-6">
+      <ul>
+        <% current_user.days.all.each do |day| %>
+          <li class="list"><h4><div class="list_item">
+            <p><%= link_to day.date, day_activities_path(day) %>
+             Date: <%= day.datefield %></p>
+          </div></h4></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="col-xs-6">
+
+      <div id="totalbar"><%= render partial: "dashbar", locals: { days: @days } %></div>
+
+    </div>
+
+  </div>
 <% else %>
 
 <h2>Please log in or sign up to continue.</h2>
