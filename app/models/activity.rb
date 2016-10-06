@@ -9,4 +9,13 @@ class Activity < ActiveRecord::Base
     seconds = self.total_time % 60
     return [seconds, minutes, hours]
   end
+
+  def percentage
+    @total = 0.00
+    self.day.activities.each do |activity|
+      @total += (activity.total_time * 10).to_f
+    end
+    @this_total = ( self.total_time * 10 ).to_f
+    return ((@this_total / @total).round(2) * 100).to_i
+  end
 end
