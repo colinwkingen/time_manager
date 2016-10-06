@@ -1,0 +1,5 @@
+<% Activity.all.each do |activity| %>
+  <% for i in 0..activity.total_time do %>
+    <div class="minute-tick" style="background-color:#<%= activity.color %>;"></div>
+  <% end %>
+<% end %>

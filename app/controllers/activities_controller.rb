@@ -9,13 +9,13 @@ class ActivitiesController < ApplicationController
     @activities = Activity.all
   end
 
-
   def new
     @day = Day.find(params[:day_id])
-    @activity = @day.activities.create({name: "Entry Not Named"})
+    @activity = @day.activities.create({name: "Entry Not Named", color: "#FFF"})
   end
 
   def create
+    binding.pry
     @day = Day.find(params[:day_id])
     @activity = @day.activities.new(activity_params)
     @activity.day_id = @day.id
@@ -59,6 +59,6 @@ class ActivitiesController < ApplicationController
 
   private
   def activity_params
-    params.require(:activity).permit(:name, :start_time, :end_time )
+    params.require(:activity).permit(:name, :start_time, :end_time, :color)
   end
 end

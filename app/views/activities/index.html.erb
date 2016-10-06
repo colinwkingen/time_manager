@@ -1,26 +1,31 @@
  <h1 class="page-header"><%= @day.date %> - <%= @day.datefield.day %> / <%= @day.datefield.month %> / <%= @day.datefield.year %></h1>
 
-<div class="list row">
-  <% @activities.each do |activity| %>
-    <div class="col-md-6">
-      <li><h4><div class="list_item">
+<div class="row">
+  <div class="list col-xs-7 row">
+    <% @activities.each do |activity| %>
+      <div class="col-md-6">
+        <li><h4><div class="list_item">
+          <%= activity.name %>
+          <h4><p class="total_time<%= activity.id %>"><%= activity.return_time[2] %>Hr : <%= activity.return_time[1] %>Min : <%= activity.return_time[0] %>S</p></h4>
+          <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
+          <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
+            <h3 class="button-text" >OFF</h3>
+          </div>
+          <div class="timer-running on_indicator<%= activity.id %> pull-right">
+            <h3 class="button-text" >ON</h3>
+          </div>
 
-        <h4>Time Spent: <p class="total_time<%= activity.id %>"><%= activity.return_time[2] %>Hr : <%= activity.return_time[1] %>Min : <%= activity.return_time[0] %>S</p></h4>
-        <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
+        </div></h4>
 
-        <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
-          <h3 class="button-text" >OFF</h3>
-        </div>
-        <div class="timer-running on_indicator<%= activity.id %> pull-right">
-          <h3 class="button-text" >ON</h3>
-        </div>
-
-      </div></h4>
-
-    </li>
-    </div>
-  <% end %>
+      </li>
+      </div>
+    <% end %>
+  </div>
+  <div class="col-xs-5">
+    <div id="totalbar"><%= render partial: "totalbar", locals: { day: @day } %></div>
+  </div>
 </div>
+
 <hr>
 <div class="row">
   <div class="col-sm-2">
@@ -34,4 +39,3 @@
              :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
   </div>
 </div>
-<%= render partial: "totalbar", locals: { day: @day } %>
