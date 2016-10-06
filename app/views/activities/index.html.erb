@@ -33,4 +33,4 @@
              :data => {:confirm => "You sure you want to remove this day from the log? This cannot be reversed.", :method => "delete"}, class: "btn btn-default field"  %></p>
   </div>
 </div>
-<%= render partial: "totalbar", locals: { day: @day } %>
+<div id="totalbar"><%= render partial: "totalbar", locals: { day: @day } %></div>

@@ -16,10 +16,11 @@ class Activity < ActiveRecord::Base
     self.day.activities.each do |activity|
       @total += (activity.total_time * 10).to_f
     end
-    if @total <= 1
-      return nil
+    if @total < 1
+      return 
+    else
+      @this_total = ( self.total_time * 10 ).to_f
+      return ((@this_total / @total).round(2) * 100).to_i
     end
-    @this_total = ( self.total_time * 10 ).to_f
-    return ((@this_total / @total).round(2) * 100).to_i
   end
 end

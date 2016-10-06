@@ -5,7 +5,7 @@
 
     <br>
     <p>
-      <label class="pull-right"><%= activity.name %> - %<%= activity.percentage %></label>
+      <label class="pull-right"><%= activity.name %> - <%= activity.percentage %>%</label>
     </p>
     <% for i in 0..activity.percentage do %>
       <div class="minute-tick" style="background-color:#<%= activity.color %>;"></div>
