@@ -1,7 +1,7 @@
 
 <% @day.activities.each do |activity| %>
 
-  <% if activity.total_time != 0 %>
+  <% if activity.percentage %>
 
     <br>
     <p>
@@ -9,7 +9,7 @@
     <br>
     </p>
     <% for i in 0..activity.percentage do %>
-      <div class="minute-tick" style="background-color:#<%= activity.color %>;"></div>
+      <div class="minute-tick" style="background-color:<%= activity.color %>;"></div>
     <% end %>
 
   <% end %>

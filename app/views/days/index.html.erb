@@ -1,21 +1,21 @@
 
 <% if current_user %>
-  <h2>Your Dashboard</h2>
+  <h1 class="page-header">Your Dashboard</h1>
 
   <div class="row">
 
-    <div class="col-xs-6">
+    <div class="col-xs-4">
       <ul>
         <% current_user.days.all.each do |day| %>
-          <li class="list"><h4><div class="list_item">
-            <p><%= link_to day.date, day_activities_path(day) %>
-             Date: <%= day.datefield %></p>
-          </div></h4></li>
+          <li class="list"><h3><div class="list_item">
+            <h3><%= link_to day.date, day_activities_path(day) %>
+             Date: <%= day.datefield %></h3>
+          </div></h3></li>
         <% end %>
       </ul>
     </div>
 
-    <div class="col-xs-6">
+    <div class="col-xs-8">
 
       <div id="totalbar"><%= render partial: "dashbar", locals: { days: @days } %></div>
 
@@ -25,5 +25,7 @@
 <% else %>
 
 <h2>Please log in or sign up to continue.</h2>
+
+<h3 class="text-xs-center">This is an app to help developers keep track of how much time they spend on various tasks. Create an account using your email and password, and you will be able to log individual days, tasks and track them graphically.</h3>
 
 <% end %>
