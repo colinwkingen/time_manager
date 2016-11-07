@@ -23,4 +23,12 @@ class Activity < ActiveRecord::Base
       return ((@this_total / @total).round(2) * 100).to_i
     end
   end
+
+  def current_diff
+    @running_total = TimeDifference.between(self.updated_at, Time.now).in_seconds.to_i
+    minutes = @running_total / 60
+    hours = minutes / 60
+    seconds = @running_total % 60
+    return [seconds, minutes, hours]
+  end
 end

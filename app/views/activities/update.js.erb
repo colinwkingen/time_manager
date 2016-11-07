@@ -2,6 +2,30 @@ $(".off_indicator<%= @activity.id %>").toggle();
 $(".on_indicator<%= @activity.id %>").toggle();
 $('.switch_activity<%= @activity.id %>').toggle();
 $('.switch_indicator<%= @activity.id %>').toggle();
-$('.total_time<%= @activity.id %>').html('<%= @activity.return_time[2] %>Hr : <%= @activity.return_time[1] %>Min : <%= @activity.return_time[0] %>S');
 
 $("#totalbar").html('<%= j render partial: "totalbar", locals: { day: @day } %>');
+
+var hours = parseInt(<%= @activity.return_time[2] %>);
+
+var minutes = parseInt(<%= @activity.return_time[1] %>);
+
+var seconds = parseInt(<%= @activity.return_time[0] %>);
+
+function startTime() {
+  if ('<%= @activity.timer_switch %>' == 'true') {
+    seconds += 1;
+    if ( seconds >= 60 ) {
+      minutes += 1;
+      seconds = 0;
+    }
+    if ( minutes >= 60 ) {
+      hours += 1;
+      minutes = 0;
+    }
+    $('.total_time<%= @activity.id %>').html('Total Time : ' + hours + ' : ' + minutes + ' : ' + seconds);
+    var t = setTimeout(startTime, 1000);
+  } else {
+    window.clearTimeout(t);
+  }
+}
+startTime();
