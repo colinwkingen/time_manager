@@ -1,5 +1,22 @@
-<% Activity.all.each do |activity| %>
-  <% for i in 0..activity.total_time do %>
-    <div class="minute-tick" style="background-color:<%= activity.color %>;"></div>
+<%
+activity_arr = []
+Activity.all.each do |activity|
+  if activity_arr.include? activity.name
+
+  else
+    activity_arr.push(activity.name)
+  end
+end
+%>
+
+<% activity_arr.each do |uniq_act| %>
+    <h3><%= uniq_act %> </h3>
+
+<%    Activity.all.each do |activity|
+      if activity.name == uniq_act
+        for i in 0..activity.total_time do %>
+          <div class="minute-tick" style="background-color:<%= activity.color %>;"></div>
+        <% end %>
+      <% end %>
+    <% end %>
   <% end %>
-<% end %>
