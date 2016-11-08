@@ -98,12 +98,22 @@ option, select, form {
   border-radius: 1%;
   border-style: solid;
   border-color: #66B;
-  margin-top: 100px;
+  margin-top: 30px;
   padding: 25px;
-  padding-top: 120px;
-  padding-bottom: 150px;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .pane-header {
   padding: 3%;
+}
+
+.devise-button {
+  background-color: #115;
+  color: #DDE;
+}
+.devise-button:hover {
+  background-color: #339;
+  color: #EEF;
+  border-color: #228;
 }

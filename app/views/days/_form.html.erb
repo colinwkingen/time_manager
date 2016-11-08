@@ -1,13 +1,19 @@
-<%= render "layouts/errors", :object => @day %>
-
-<%= form_for @day do |f| %>
-  <%= f.label :date %>
-  <div id="drop_down">
-    <%= f.select :date, [['Please Select a Day','Unspecified'],['Sunday','Sunday'],['Monday','Monday'],['Tuesday','Tuesday'],['Wednesday','Wednesday'],['Thursday','Thursday'],['Friday','Friday'],['Saturday','Saturday']], id: 'drop_down', selected: 1 %>
+<div class="row">
+  <div class="col-xs-4">
   </div>
-  <%= f.label :datefield, class: 'devise-labels' %>
-  <%= f.date_select :datefield, options = {order: [:day, :month, :year]}, class: "field" %>
+  <div class="info-pane col-xs-4">
+    <%= render "layouts/errors", :object => @day %>
 
-  <%= f.submit class: "btn btn-default field" %>
-<% end %>
-<%= link_to "Back", days_path(@day), class: "btn btn-default field" %>
+    <%= form_for @day do |f| %>
+      <%= f.label :date %>
+      <div id="drop_down">
+        <%= f.select :date, [['Please Select a Day','Unspecified'],['Sunday','Sunday'],['Monday','Monday'],['Tuesday','Tuesday'],['Wednesday','Wednesday'],['Thursday','Thursday'],['Friday','Friday'],['Saturday','Saturday']], id: 'drop_down', class: 'form-control', selected: 1 %>
+      </div>
+      <%= f.label :datefield, class: 'devise-labels' %>
+      <%= f.date_select :datefield, options = {order: [:day, :month, :year]}, class: "field" %>
+
+      <%= f.submit class: "btn btn-default field" %>
+    <% end %>
+    <%= link_to "Back", days_path(@day), class: "btn btn-default field" %>
+  </div>
+</div>

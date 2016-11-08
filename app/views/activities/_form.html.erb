@@ -11,7 +11,7 @@
 
 
 
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
     <%= f.color_field :color %>
 
     <%= f.submit 'Set Activity Name', class: "btn btn-default field", :data => { :method => 'patch'} %>
