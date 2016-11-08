@@ -7,10 +7,10 @@
     <div class="col-xs-4">
       <ul>
         <% current_user.days.all.each do |day| %>
-          <li class="list"><h3><div class="list_item">
-            <h3><%= link_to day.date, day_activities_path(day) %>
-             Date: <%= day.datefield %></h3>
-          </div></h3></li>
+          <li class="day-link list list_item">
+            <h4><%= link_to day.date, day_activities_path(day) %>
+             Date: <%= day.datefield %></h4>
+          </li>
         <% end %>
       </ul>
     </div>
@@ -23,9 +23,9 @@
 
   </div>
 <% else %>
+  <div class="info-pane welcome-pane">
+    <h1 id="intro-header"><strong>Please log in or sign up to continue.</strong></h1>
 
-<h2>Please log in or sign up to continue.</h2>
-
-<h3 class="text-xs-center">This is an app to help developers keep track of how much time they spend on various tasks. Create an account using your email and password, and you will be able to log individual days, tasks and track them graphically.</h3>
-
+    <h3 class="text-xs-center">This is an app to help developers keep track of how much time they spend on various tasks. Create an account using your email and password, and you will be able to log individual days, tasks and track them graphically.</h3>
+  </div>
 <% end %>

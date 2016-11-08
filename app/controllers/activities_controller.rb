@@ -43,8 +43,10 @@ class ActivitiesController < ApplicationController
     @day = @activity.day
     if params[:commit].eql? 'End Time'
       @new_total = (@activity.total_time += TimeDifference.between(@activity.updated_at, Time.now).in_seconds.to_i)
+      @activity.timer_switch = false
     else
       @new_total = @activity.total_time
+      @activity.timer_switch = true
     end
     if @activity.update(activity_params) && @activity.update({total_time: @new_total })
       flash[:success] = "Activity Changed"

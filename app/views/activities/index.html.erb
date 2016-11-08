@@ -1,4 +1,4 @@
- <h1 class="page-header"><%= @day.date %> - <%= @day.datefield.day %> / <%= @day.datefield.month %> / <%= @day.datefield.year %></h1>
+<h1 class="page-header"><%= @day.date %> - <%= @day.datefield.day %> / <%= @day.datefield.month %> / <%= @day.datefield.year %></h1>
 
 <div class="row">
   <div class="list col-xs-7 row">
@@ -6,7 +6,7 @@
       <div class="col-md-6">
         <li><h4><div class="list_item">
           <%= activity.name %>
-          <h4><p class="total_time<%= activity.id %>"><%= activity.return_time[2] %>Hr : <%= activity.return_time[1] %>Min : <%= activity.return_time[0] %>S</p></h4>
+          <h4><p class="total_time<%= activity.id %>">Total Time : <%= activity.return_time[2] %> : <%= activity.return_time[1] %> : <%= activity.return_time[0] %></p></h4>
           <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
           <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
             <h3 class="button-text" >OFF</h3>

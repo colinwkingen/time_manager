@@ -1,10 +1,9 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
-
 body {
   background-color: #000;
+  background: image-url('background.jpg');
   color: #E9E9FF;
 }
 
@@ -26,9 +25,15 @@ body {
   margin: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #222;
+  background-color: #000;
+  border-color: #AAF;
   color: white;
   font-size: 1.1em;
+}
+
+.btn:hover {
+  background-color: #300;
+  border-color: #D03;
 }
 
 .devise-labels {
@@ -60,14 +65,18 @@ option, select, form {
   background-color: #A00;
   border-radius: 10%;
   color: black;
+  border-style: solid;
+  border-color: #400;
 }
 
 .timer-running {
   height: 70px;
   width: 70px;
   margin-top: 5px;
-  background-color: #0A0;
+  background-color: #0F0;
+  border-color: #0B0;
   display: none;
+  border-style: solid;
   border-radius: 10%;
   color: white;
 }
@@ -81,4 +90,52 @@ option, select, form {
 
 .end-button {
   display: none;
+}
+
+.info-pane {
+  opacity: 0.6;
+  background-color: #000;
+  border-radius: 1%;
+  border-style: solid;
+  border-color: #66B;
+  margin-top: 30px;
+  padding: 25px;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.pane-header {
+  padding: 3%;
+}
+
+.devise-button {
+  background-color: #115;
+  color: #DDE;
+}
+.devise-button:hover {
+  background-color: #339;
+  color: #EEF;
+  border-color: #228;
+}
+
+.welcome-pane {
+  margin-top: 180px;
+}
+
+#intro-header {
+  color: #F3F3FF;
+}
+
+.day-pane {
+  opacity: 0.6;
+  background-color: #000;
+  border-radius: 1%;
+  border-style: solid;
+  border-color: #66B;
+  padding: 5px;
+  padding-left: 15px;
+}
+
+.day-link {
+  color: #DDF;
 }

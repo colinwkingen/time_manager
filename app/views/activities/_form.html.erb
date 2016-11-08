@@ -1,20 +1,24 @@
 <%= render('layouts/errors', :object => @activity) %>
 
-
-  <% if @day.activities.length < 24 %>
-    <h5>There are <%= @day.activities.length %> activities currently logged.</h5>
+<div>
+  <div class="info-pane text-center">
+    <% if @day.activities.length < 24 %>
+    <h3 class="pane-header">There will now be <%= @day.activities.length %> different activities available for this day.</h3>
     <%= form_for [@day, @activity] do |f| %>
-      <%= f.label :name, class: 'devise-labels' %>
+
+    <p><%= f.label :name, class: 'devise-labels hidden' %></p>
 
 
 
 
-      <%= f.text_field :name %>
-      <%= f.color_field :color %>
+    <%= f.text_field :name, class: 'form-control' %>
+    <%= f.color_field :color %>
 
-      <p><%= f.submit 'Set Activity Name', class: "btn btn-default field", :data => { :method => 'patch'} %></p>
+    <%= f.submit 'Set Activity Name', class: "btn btn-default field", :data => { :method => 'patch'} %>
+
+    <%= link_to "Cancel", day_activity_path(@day, @activity),
+    :data => { :method => "delete"}, class: "btn btn-default field"  %>
     <% end %>
-  <% end %>
-
-  <%= link_to "Cancel", day_activity_path(@day, @activity),
-           :data => { :method => "delete"}, class: "btn btn-default field"  %>
+    <% end %>
+  </div>
+</div>
