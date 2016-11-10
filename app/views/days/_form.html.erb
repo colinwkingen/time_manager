@@ -6,14 +6,18 @@
 
     <%= form_for @day do |f| %>
       <%= f.label :date %>
-      <div id="drop_down">
-        <%= f.select :date, [['Please Select a Day','Unspecified'],['Sunday','Sunday'],['Monday','Monday'],['Tuesday','Tuesday'],['Wednesday','Wednesday'],['Thursday','Thursday'],['Friday','Friday'],['Saturday','Saturday']], id: 'drop_down', class: 'form-control', selected: 1 %>
+      <div id="drop_down" class="dropdown">
+        <%= f.select :date, [['Please Select a Day','Unspecified'],['Sunday','Sunday'],['Monday','Monday'],['Tuesday','Tuesday'],['Wednesday','Wednesday'],['Thursday','Thursday'],['Friday','Friday'],['Saturday','Saturday']], id: 'drop_down', class: 'form-control dropdown-menu', selected: 1 %>
       </div>
+      <br>
       <%= f.label :datefield, class: 'devise-labels' %>
+      <br>
       <%= f.date_select :datefield, options = {order: [:day, :month, :year]}, class: "field" %>
-
-      <%= f.submit class: "btn btn-default field" %>
+      <br>
+      <p id="add-day-buttons">
+        <%= f.submit class: "btn btn-default field" %>
+        <%= link_to "Back", days_path(@day), class: "btn btn-default field" %>
+      </p>
     <% end %>
-    <%= link_to "Back", days_path(@day), class: "btn btn-default field" %>
   </div>
 </div>
