@@ -124,6 +124,7 @@ GEM
       railties (~> 5.0)
     multi_json (1.12.1)
     multipart-post (2.0.0)
+    newrelic_rpm (3.17.1.326)
     nio4r (1.2.1)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
@@ -270,6 +271,7 @@ DEPENDENCIES
   launchy
   listen (~> 3.0.5)
   minitest-rails
+  newrelic_rpm
   pg (~> 0.18)
   poltergeist
   pry
