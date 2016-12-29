@@ -1,11 +1,15 @@
 class Day < ActiveRecord::Base
   belongs_to :user
   has_many :activities
-  validates :date, :presence => true
   validates :datefield, :presence => true
 
   after_create :create_defaults
 
+  def weekday
+    weekday = self.datefield.wday
+    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    return weekdays[weekday]
+  end
 
 
   def create_defaults

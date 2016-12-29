@@ -8,7 +8,7 @@
       <ul>
         <% current_user.days.all.each do |day| %>
           <li class="day-link list list_item">
-            <h4><%= link_to day.date, day_activities_path(day) %>
+            <h4><%= link_to day.weekday, day_activities_path(day) %>
              Date: <%= day.datefield %></h4>
           </li>
         <% end %>
