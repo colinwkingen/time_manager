@@ -11,6 +11,14 @@ class Day < ActiveRecord::Base
     return weekdays[weekday]
   end
 
+  def day_total
+    day_total = 0;
+    self.activities.each do |activity|
+      day_total += activity.total_time
+    end
+    return day_total
+  end
+
 
   def create_defaults
     self.activities.create(name: 'Backend Coding', color: '#B00')
