@@ -1,7 +1,9 @@
-$(".off_indicator<%= @activity.id %>").toggle();
-$(".on_indicator<%= @activity.id %>").toggle();
-$('.switch_activity<%= @activity.id %>').toggle();
-$('.switch_indicator<%= @activity.id %>').toggle();
+var id = '<%= @activity.id %>';
+
+$(".off_indicator" + id).toggle();
+$(".on_indicator" + id).toggle();
+$('.switch_activity' + id).toggle();
+$('.switch_indicator' + id).toggle();
 
 
 var hours = parseInt(<%= @activity.return_time[2] %>);
@@ -12,6 +14,8 @@ var total_time = parseInt(<%= @activity.total_time %>);
 var day_total = parseInt(<%= @activity.day.day_total %>);
 var percentage = parseInt(<%= @activity.percentage %>);
 
+/*Theory: It's so fucking slow because you are hitting the database tons of times.
+Look at all that embedded ruby. Pull some of that info out so you only grab it once.*/
 
 function running_meter() {
   total_time += 1;
@@ -33,7 +37,7 @@ function start_time() {
     }
     meter = running_meter();
     $("#totalbar").html("<div><h1>%" + meter + "</h1></div>");
-    $('.total_time<%= @activity.id %>').html('Total Time : ' + hours + ' : ' + minutes + ' : ' + seconds);
+    $('.total_time' + id).html('Total Time : ' + hours + ' : ' + minutes + ' : ' + seconds);
     var t = setTimeout(start_time, 1000);
   } else {
     $("#totalbar").html('<%= j render partial: "totalbar", locals: { day: @day } %>');
