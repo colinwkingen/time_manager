@@ -1,7 +1,7 @@
 class Activity < ActiveRecord::Base
   belongs_to :day
   validates :name, :presence => true
-  default_scope {order('id ASC')}
+  default_scope { order('id ASC') }
 
 
   def return_time
@@ -19,8 +19,8 @@ class Activity < ActiveRecord::Base
     if @total < 1
       return
     else
-      @this_total = ( self.total_time * 10 ).to_f
-      return ((@this_total / @total).round(2) * 100).to_i
+      @this_total = (self.total_time * 10).to_f
+      return ((@this_total / @total) * 100).to_i.round(0)
     end
   end
 
@@ -33,4 +33,4 @@ class Activity < ActiveRecord::Base
   end
 end
 # Get updated times from here. These methods return the same value until
-# the timestamp is made. 
+# the timestamp is made.

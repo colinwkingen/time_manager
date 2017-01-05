@@ -8,8 +8,7 @@ FactoryGirl.define do
   end
 
   factory(:day) do
-    datefield('03/24/1985')
-    date('Thursday')
+    datefield Date.new
     user
   end
 

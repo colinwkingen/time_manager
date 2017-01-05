@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20161229225821) do
     t.integer  "day_id"
     t.integer  "start_time"
     t.integer  "end_time"
-    t.integer  "total_time",   default: 0
-    t.string   "color"
+    t.integer  "total_time",   default: 0, null: false
+    t.string   "color", default: "AAA", null: false
     t.boolean  "timer_switch"
   end
 
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20161229225821) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "user_id"
-    t.date     "datefield"
+    t.date     "datefield", default: '01/01/2001', null: false
   end
 
   create_table "users", force: :cascade do |t|

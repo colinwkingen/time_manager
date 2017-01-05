@@ -7,16 +7,16 @@ class Day < ActiveRecord::Base
 
   def weekday
     weekday = self.datefield.wday
-    weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    return weekdays[weekday]
+    weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    weekdays[weekday]
   end
 
   def day_total
-    day_total = 0;
+    day_total = 0
     self.activities.each do |activity|
       day_total += activity.total_time
     end
-    return day_total
+    day_total
   end
 
 

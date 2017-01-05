@@ -14,24 +14,24 @@ class ActivitiesController < ApplicationController
     @activity = @day.activities.create({name: "Entry Not Named", color: "#FFF"})
   end
 
-  def create
-    binding.pry
-    @day = Day.find(params[:day_id])
-    @activity = @day.activities.new(activity_params)
-    @activity.day_id = @day.id
-    if @activity.save
-      flash[:success] = "Activity Set"
-      redirect_to day_path(@activity.day)
-    else
-      render :new
-    end
-  end
+  # def create
+  #   binding.pry
+  #   @day = Day.find(params[:day_id])
+  #   @activity = @day.activities.new(activity_params)
+  #   @activity.day_id = @day.id
+  #   if @activity.save
+  #     flash[:success] = "Activity Set"
+  #     redirect_to day_path(@activity.day)
+  #   else
+  #     render :new
+  #   end
+  # end
 
-  def destroy
-    @activity = Activity.find(params[:id])
-    @activity.destroy
-    redirect_to day_activities_path
-  end
+  # def destroy
+  #   @activity = Activity.find(params[:id])
+  #   @activity.destroy
+  #   redirect_to day_activities_path
+  # end
 
   def edit
     @activity = Activity.find(params[:id])
