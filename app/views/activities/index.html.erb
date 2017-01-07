@@ -7,7 +7,7 @@
         <li><h4><div class="list_item">
           <%= activity.name %>
           <%= link_to "X", day_activity_path(@day, activity),
-          :data => { :method => "delete"}, class: "remove_activity pull-right"  %>
+          :data => {:confirm => "Do you want to permanently delete this activity?", :method => "delete"}, class: "remove_activity pull-right"  %>
           <h4><p class="total_time<%= activity.id %>">Total Time : <%= activity.return_time[2] %> : <%= activity.return_time[1] %> : <%= activity.return_time[0] %></p></h4>
           <%= render partial: "activitypanel", locals: { day: @day, activity: activity} %>
           <div class="timer-stopped off_indicator<%= activity.id %> pull-right">
