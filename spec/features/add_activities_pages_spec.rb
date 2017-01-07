@@ -44,7 +44,6 @@ describe 'the add activity to day process' do
     fill_in 'Name', with: 'Reading'
     click_on 'Set Activity Name'
     expect(page).to have_content 'Reading'
-
   end
 
   it 'lets you delete a logged day from the main list' do
@@ -53,4 +52,14 @@ describe 'the add activity to day process' do
     click_on 'Delete'
     expect(page).to have_content 'Your Dashboard'
   end
+
+  it 'takes you to a page where you can create an activity' do
+    visit days_path
+    click_link 'Monday'
+    click_on 'Add Activity'
+    fill_in 'Name', with: 'Sleeping'
+    click_on 'Cancel'
+    expect(page).to_not have_content 'Sleeping'
+  end
+
 end

@@ -141,6 +141,16 @@ option, select, form {
   color: #DDF;
 }
 
+.remove_activity {
+    &:link {
+      color: #CCF;
+    }
+    &:hover {
+      color: #C00;
+    }
+  border-style: solid;
+  border-color: #BBE;
+}
 
 #add-day-buttons {
   margin-top: 20px;
