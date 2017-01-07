@@ -9,22 +9,9 @@ var hours = parseInt(<%= @activity.return_time[2] %>);
 var minutes = parseInt(<%= @activity.return_time[1] %>);
 var seconds = parseInt(<%= @activity.return_time[0] %>);
 
-var day_total = parseInt(<%= @activity.day.day_total %>);
-var percentage = parseInt(<%= @activity.percentage %>);
+/*var day_total = parseInt(<%= @activity.day.day_total %>);
+var percentage = parseInt(<%= @activity.percentage %>);*/
 
-var activity_total;
-
-var switch = ('<%= @activity.timer_switch %>' === 'true');
-
-if (switch === false) {
-  $("#totalbar").html('<%= j render partial: "totalbar", locals: { day: @day } %>');
-}
-
-function running_meter() {
-  day_total += 1;
-  activity_total = seconds + (minutes / 60) + (hours / 3600);
-  return Math.floor(100 * (activity_total / day_total)).toString();
-}
 
 function start_time() {
   var meter = "";
@@ -38,8 +25,6 @@ function start_time() {
       hours += 1;
       minutes = 0;
     }
-    meter = running_meter();
-    $("#totalbar").html("<div class='on_percent'><h1>%" + meter + "</h1></div>");
     $('.total_time' + id).html('Total Time : ' + hours + ' : ' + minutes + ' : ' + seconds);
     var t = setTimeout(start_time, 1000);
   } else {
@@ -47,7 +32,4 @@ function start_time() {
     window.clearTimeout(t);
   }
 }
-
-if ('<%= @activity.timer_switch %>' == 'true') {
-  start_time();
-}
+start_time();
