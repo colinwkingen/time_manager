@@ -1,30 +1,11 @@
-<%
-activity_arr = []
-Activity.all.each do |activity|
-  if activity_arr.include? activity.name
 
-  else
-    activity_arr.push(activity.name)
-  end
-end
-%>
-
-<% activity_arr.each do |uniq_act| %>
-<h3><%= uniq_act %><%=  %></h3>
-  <%  Activity.all.each do |activity| %>
-    <%  if activity.name == uniq_act %>
-        <% for i in 0..activity.total_time do %>
-          <div class="minute-tick" style="background-color:<%= activity.color %>;"></div>
-        <% end %>
-      <% end %>
+  <%  current_user.activity_totals.each do |activity| %>
+    <h3><%= activity[0] %></h3>
+    <% for i in 0..activity[1][:time] do %>
+      <div class="minute-tick" style="background-color:<%= activity[1][:color] %>;"></div>
     <% end %>
   <% end %>
 
-
-<!-- Find the days and activities for just the current user.
-Each day has a user_id attribute, should be matchable to the current_user attribute
-created by devise. Perhaps a method on the day model will be necessary to get this
-info and keep concerns properly separated.  -->
 
 
 <%=
