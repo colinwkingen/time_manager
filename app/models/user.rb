@@ -21,18 +21,17 @@ class User < ApplicationRecord
   # instead returns empty hash. FIX. Gets a small number now...
 
   def activity_totals
-    activity_arr = {}
+    activity_h = {}
     self.days.each do |day|
-      # byebug
       day.activities.each do |activity|
         key = activity.name
-        if activity_arr.key?(:key)
-          activity_arr[:key] += activity.total_time
+        if activity_h.key?(key)
+          activity_h[key] += activity.total_time
         else
-          activity_arr[:key] = activity.total_time
+          activity_h.store(activity.name, activity.total_time)
         end
       end
     end
-    activity_arr
+    activity_h
   end
 end
