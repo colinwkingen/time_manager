@@ -3,7 +3,7 @@
 <div class="row">
   <div class="list col-xs-7 row">
     <% @activities.each do |activity| %>
-      <div class="col-md-6">
+      <div class="panel_back col-md-6">
         <li><h4><div class="list_item">
           <%= activity.name %>
           <%= link_to "X", day_activity_path(@day, activity),

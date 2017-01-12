@@ -11,13 +11,18 @@ body {
   color: black;
 }
 
-.list_item {
-  margin: 7px;
-
-}
+// .list_item {
+//   margin: 7px;
+// }
 
 .list {
   list-style: none;
+}
+
+.panel_back {
+  width: 45%;
+  background: rgba(40,40,40,0.7);
+  margin: 5px;
 }
 
 .btn {
@@ -29,12 +34,11 @@ body {
   border-color: #AAF;
   color: white;
   font-size: 1.1em;
-}
-
-.btn:hover {
-  background-color: #111;
-  color: white;
-  border-color: #DDF;
+    &:hover {
+      background-color: #111;
+      color: white;
+      border-color: #DDF;
+    }
 }
 
 .devise-labels {
@@ -112,11 +116,11 @@ option, select, form {
 .devise-button {
   background-color: #115;
   color: #DDE;
-}
-.devise-button:hover {
-  background-color: #339;
-  color: #EEF;
-  border-color: #228;
+    &:hover {
+      background-color: #339;
+      color: #EEF;
+      border-color: #228;
+    }
 }
 
 .welcome-pane {
@@ -138,30 +142,27 @@ option, select, form {
 }
 
 .day-link {
+  background: rgba(40,40,40,0.7);
+  margin: 5px;
+  padding: 2px;
   color: #DDF;
+  &:link {
+    color: #BBF;
+  }
 }
 
 .remove_activity {
+  font-size: 0.8em;
     &:link {
-      color: #CCF;
+      color: #AAD;
     }
     &:hover {
-      color: #C00;
+      color: #B00;
     }
   border-style: solid;
-  border-color: #BBE;
+  border-color: #99A;
 }
 
 #add-day-buttons {
   margin-top: 20px;
-}
-
-.on_percent {
-  h1 {
-    font-size: 7em;
-  }
-  width: 100%;
-  height: 200px;
-  border-style: double;
-  border-color: white;
 }
