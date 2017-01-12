@@ -36,8 +36,7 @@ class User < ApplicationRecord
         else
           activity_h.store(key, value)
         end
-        percentage = ((activity_h[key][:time].to_f / self.days_total.to_f).round(2) * 100).to_i
-        activity_h[key][:percentage] = percentage
+        activity_h[key][:percentage] = ((activity_h[key][:time].to_f / self.days_total.to_f).round(2) * 100).to_i
       end
     end
     activity_h

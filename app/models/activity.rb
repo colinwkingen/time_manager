@@ -32,5 +32,3 @@ class Activity < ActiveRecord::Base
     return [seconds, minutes, hours]
   end
 end
-# Get updated times from here. These methods return the same value until
-# the timestamp is made.
