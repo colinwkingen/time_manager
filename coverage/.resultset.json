@@ -660,6 +660,25 @@
         0,
         0,
         null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        19,
+        19,
+        null,
+        19,
+        130,
+        130,
+        114,
+        null,
+        16,
+        null,
+        null,
+        null,
+        19,
+        null,
         null
       ],
       "/home/colinwkingen/Desktop/time_manager/app/models/application_record.rb": [
@@ -765,6 +784,10 @@
         1,
         1,
         20,
+        19,
+        null,
+        1,
+        null,
         null,
         null,
         1,
@@ -828,7 +851,7 @@
         1,
         1,
         1,
-        389,
+        446,
         null,
         null,
         1,
@@ -1020,6 +1043,6 @@
         null
       ]
     },
-    "timestamp": 1483752053
+    "timestamp": 1484035508
   }
 }

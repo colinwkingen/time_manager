@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-06T17:20:53-08:00">2017-01-06T17:20:53-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-10T00:05:08-08:00">2017-01-10T00:05:08-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">91.81%</span></span>
+    (<span class="covered_percent"><span class="green">92.07%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         9.56
+         10.8
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>38</b> files in total.
-    <b>342</b> relevant lines. 
-    <span class="green"><b>314</b> lines covered</span> and
+    <b>353</b> relevant lines. 
+    <span class="green"><b>325</b> lines covered</span> and
     <span class="red"><b>28</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#6fd346a40d95fe598fce2d63a33f24c5f3987ee1" class="src_link" title="app/controllers/days_controller.rb">app/controllers/days_controller.rb</a></td>
-        <td class="red strong">72.41 %</td>
-        <td>51</td>
-        <td>29</td>
-        <td>21</td>
+        <td class="red strong">74.19 %</td>
+        <td>55</td>
+        <td>31</td>
+        <td>23</td>
         <td>8</td>
-        <td>2.0</td>
+        <td>2.5</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>22</td>
         <td>15</td>
         <td>7</td>
-        <td>120.0</td>
+        <td>122.5</td>
       </tr>
       
       <tr>
@@ -152,12 +152,12 @@
       
       <tr>
         <td class="strong"><a href="#7d5eee948a47792e14e409658c99a5a7dc24cfe4" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="red strong">66.67 %</td>
-        <td>19</td>
-        <td>9</td>
-        <td>6</td>
+        <td class="yellow strong">83.33 %</td>
+        <td>38</td>
+        <td>18</td>
+        <td>15</td>
         <td>3</td>
-        <td>0.7</td>
+        <td>26.3</td>
       </tr>
       
       <tr>
@@ -1037,10 +1037,10 @@
         <div class="source_table" id="6fd346a40d95fe598fce2d63a33f24c5f3987ee1">
   <div class="header">
     <h3>app/controllers/days_controller.rb</h3>
-    <h4><span class="red">72.41 %</span> covered</h4>
+    <h4><span class="red">74.19 %</span> covered</h4>
     <div>
-      <b>29</b> relevant lines. 
-      <span class="green"><b>21</b> lines covered</span> and
+      <b>31</b> relevant lines. 
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
@@ -1063,31 +1063,31 @@
         <li class="covered" data-hits="20" data-linenumber="3">
           <span class="hits">20</span>
           
-          <code class="ruby">    @days = Day.all</code>
+          <code class="ruby">    if current_user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="19" data-linenumber="4">
+          <span class="hits">19</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">      @days = Day.all.where(user_id: current_user.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">    else</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  def show</code>
+          <code class="ruby">      @days = []</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">    @day = Day.find(params[:id])</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
@@ -1105,13 +1105,13 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">  def new</code>
+          <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="11">
-          <span class="hits">5</span>
+        <li class="missed" data-hits="0" data-linenumber="11">
           
-          <code class="ruby">    @day = Day.new</code>
+          
+          <code class="ruby">    @day = Day.find(params[:id])</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
@@ -1129,79 +1129,79 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def create</code>
+          <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="15">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="5" data-linenumber="15">
+          <span class="hits">5</span>
           
-          <code class="ruby">    @day = Day.new(day_params)</code>
+          <code class="ruby">    @day = Day.new</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="16">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    @day.user_id = current_user.id</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="17">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    if @day.save</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="18">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      flash[:success] = &#39;Day Added&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="19">
-          <span class="hits">3</span>
-          
-          <code class="ruby">      redirect_to days_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">    else</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="21">
-          
-          
-          <code class="ruby">      render :new</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="24">
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="25">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">  def edit</code>
+          <code class="ruby">  def create</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
+        <li class="covered" data-hits="3" data-linenumber="19">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @day = Day.new(day_params)</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="20">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    @day.user_id = current_user.id</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="21">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    if @day.save</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="22">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      flash[:success] = &#39;Day Added&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="23">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      redirect_to days_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby">    @day = Day.find(params[:id])</code>
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="25">
+          
+          
+          <code class="ruby">      render :new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -1219,7 +1219,7 @@
         <li class="covered" data-hits="1" data-linenumber="29">
           <span class="hits">1</span>
           
-          <code class="ruby">  def update</code>
+          <code class="ruby">  def edit</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="30">
@@ -1228,118 +1228,118 @@
           <code class="ruby">    @day = Day.find(params[:id])</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">    if @day.update(day_params)</code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="32">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">      flash[:success] = &#39;Day Updated&#39;</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      redirect_to days_path</code>
+          <code class="ruby">  def update</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="missed" data-hits="0" data-linenumber="34">
           
           
-          <code class="ruby">    else</code>
+          <code class="ruby">    @day = Day.find(params[:id])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="35">
           
           
-          <code class="ruby">      render :edit</code>
+          <code class="ruby">    if @day.update(day_params)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="missed" data-hits="0" data-linenumber="36">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">      flash[:success] = &#39;Day Updated&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="missed" data-hits="0" data-linenumber="37">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      redirect_to days_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="39">
+          
+          
+          <code class="ruby">      render :edit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">  def destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="40">
+        <li class="covered" data-hits="2" data-linenumber="44">
           <span class="hits">2</span>
           
           <code class="ruby">    @day = Day.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="41">
+        <li class="covered" data-hits="2" data-linenumber="45">
           <span class="hits">2</span>
           
           <code class="ruby">    @day.destroy</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="42">
+        <li class="covered" data-hits="2" data-linenumber="46">
           <span class="hits">2</span>
           
           <code class="ruby">    redirect_to days_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="43">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
           <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby">  </code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def day_params</code>
-        </li>
-      
-        <li class="covered" data-hits="3" data-linenumber="48">
-          <span class="hits">3</span>
-          
-          <code class="ruby">    params.require(:day).permit(:date, :datefield)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
-          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
@@ -1348,7 +1348,31 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def day_params</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="52">
+          <span class="hits">3</span>
+          
+          <code class="ruby">    params.require(:day).permit(:date, :datefield)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="54">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">end</code>
@@ -1462,8 +1486,8 @@
           <code class="ruby">  validates :name, :presence =&gt; true</code>
         </li>
       
-        <li class="covered" data-hits="389" data-linenumber="4">
-          <span class="hits">389</span>
+        <li class="covered" data-hits="446" data-linenumber="4">
+          <span class="hits">446</span>
           
           <code class="ruby">  default_scope { order(&#39;id ASC&#39;) }</code>
         </li>
@@ -1907,10 +1931,10 @@
         <div class="source_table" id="7d5eee948a47792e14e409658c99a5a7dc24cfe4">
   <div class="header">
     <h3>app/models/user.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="yellow">83.33 %</span> covered</h4>
     <div>
-      <b>9</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
@@ -2027,6 +2051,120 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="19">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby">  # Should return totals of all activities and totals of activity time for the user as a hash</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  # instead returns empty hash. FIX. Gets a small number now...</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def activity_totals</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="24">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    activity_arr = {}</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="25">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    self.days.each do |day|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">      # byebug</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="27">
+          <span class="hits">19</span>
+          
+          <code class="ruby">      day.activities.each do |activity|</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="28">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        key = activity.name</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="29">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        if activity_arr.key?(:key)</code>
+        </li>
+      
+        <li class="covered" data-hits="114" data-linenumber="30">
+          <span class="hits">114</span>
+          
+          <code class="ruby">          activity_arr[:key] += activity.total_time</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="covered" data-hits="16" data-linenumber="32">
+          <span class="hits">16</span>
+          
+          <code class="ruby">          activity_arr[:key] = activity.total_time</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="36">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    activity_arr</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
           
           
           <code class="ruby">end</code>
