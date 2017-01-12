@@ -8,7 +8,7 @@
       <br>
       <%= f.label :datefield, class: 'devise-labels' %>
       <br>
-      <%= f.date_select :datefield, options = {order: [:day, :month, :year]}, class: "field" %>
+      <%= f.date_select :datefield, options = {order: [:day, :month, :year], start_year: Date.today.year, end_year: 2030}, class: "field" %>
       <br>
       <p id="add-day-buttons">
         <%= f.submit class: "btn btn-default field" %>

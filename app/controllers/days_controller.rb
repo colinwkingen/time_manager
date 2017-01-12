@@ -1,6 +1,10 @@
 class DaysController < ApplicationController
   def index
-    @days = Day.all
+    if current_user
+      @days = Day.all.where(user_id: current_user.id)
+    else
+      @days = []
+    end
   end
 
   def show
@@ -43,7 +47,7 @@ class DaysController < ApplicationController
   end
 
   private
-  
+
   def day_params
     params.require(:day).permit(:date, :datefield)
   end

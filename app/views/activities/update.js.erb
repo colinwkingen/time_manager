@@ -1,23 +1,17 @@
-$(".off_indicator<%= @activity.id %>").toggle();
-$(".on_indicator<%= @activity.id %>").toggle();
-$('.switch_activity<%= @activity.id %>').toggle();
-$('.switch_indicator<%= @activity.id %>').toggle();
-
+var id = '<%= @activity.id %>';
+debugger;
+$(".off_indicator" + id).toggle();
+$(".on_indicator" + id).toggle();
+$('.switch_activity' + id).toggle();
+$('.switch_indicator' + id).toggle();
 
 var hours = parseInt(<%= @activity.return_time[2] %>);
 var minutes = parseInt(<%= @activity.return_time[1] %>);
 var seconds = parseInt(<%= @activity.return_time[0] %>);
 
-var total_time = parseInt(<%= @activity.total_time %>);
-var day_total = parseInt(<%= @activity.day.day_total %>);
-var percentage = parseInt(<%= @activity.percentage %>);
+/*var day_total = parseInt(<%= @activity.day.day_total %>);
+var percentage = parseInt(<%= @activity.percentage %>);*/
 
-
-function running_meter() {
-  total_time += 1;
-  day_total += 1;
-  return Math.round(100 * (total_time / day_total)).toString();
-}
 
 function start_time() {
   var meter = "";
@@ -31,16 +25,11 @@ function start_time() {
       hours += 1;
       minutes = 0;
     }
-    meter = running_meter();
-    $("#totalbar").html("<div><h1>%" + meter + "</h1></div>");
-    $('.total_time<%= @activity.id %>').html('Total Time : ' + hours + ' : ' + minutes + ' : ' + seconds);
+    $('.total_time' + id).html('Total Time : ' + hours + ' : ' + minutes + ' : ' + seconds);
     var t = setTimeout(start_time, 1000);
   } else {
     $("#totalbar").html('<%= j render partial: "totalbar", locals: { day: @day } %>');
     window.clearTimeout(t);
   }
 }
-
-if ('<%= @activity.timer_switch %>' == 'true') {
-  start_time();
-}
+start_time();

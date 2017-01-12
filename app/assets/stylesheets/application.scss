@@ -32,8 +32,9 @@ body {
 }
 
 .btn:hover {
-  background-color: #300;
-  border-color: #D03;
+  background-color: #111;
+  color: white;
+  border-color: #DDF;
 }
 
 .devise-labels {
@@ -140,6 +141,27 @@ option, select, form {
   color: #DDF;
 }
 
+.remove_activity {
+    &:link {
+      color: #CCF;
+    }
+    &:hover {
+      color: #C00;
+    }
+  border-style: solid;
+  border-color: #BBE;
+}
+
 #add-day-buttons {
   margin-top: 20px;
+}
+
+.on_percent {
+  h1 {
+    font-size: 7em;
+  }
+  width: 100%;
+  height: 200px;
+  border-style: double;
+  border-color: white;
 }

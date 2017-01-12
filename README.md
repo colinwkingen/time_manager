@@ -6,48 +6,11 @@ This app is viewable at: https://github.com/colinwkingen/time_manager
 
 ## Description
 
-This is the beginning of a time tracking app in Ruby on Rails, using Postgres.
+This is a time tracking app in Ruby on Rails 5, using Postgres.
 
-### Bug Hunting
-
-[:ajd,
- :amjd,
- :mjd,
- :ld,
- :day_fraction,
- :cwyear,
- :cweek,
- :cwday,
- :julian?,
- :gregorian?,
- :new_start,
- :italy,
- :england,
- :julian,
- :gregorian,
- :next_day,
- :prev_day,
- :start,
- :next_month,
- :prev_month,
- :next_year,
- :prev_year,
- :to_time,
-
-
-for creating new tags in the create activity view without rendering new view:
-activity did not exist so we create an activity when the new route is reached
-further tag additions will need to use the update routes
-destroying untagged dummy activities will need to be handled if user navigates from activity save without creation.. possibly activity.last.destroy on back
-
-
-maybe you should just allow the user to add a day with a title from the main view day route, then let them add tags in the edit path. this shit is getting annoying. swim with the current, not against it.
-
-### Specifics to implement
-* You should be able to add a new activity in a field
-* You should be able to choose from available activities in a dropdown
-* You should be able to see all time percentages on a dashboard
 ### User Stories
+
+Done:
 
 * I want tp be able to log in to a personal account for my time management.
 * I want to see that i'm logged in on a nav bar
@@ -56,6 +19,9 @@ maybe you should just allow the user to add a day with a title from the main vie
 * I want to see the percentage of an individual day spent on each activity.
 * I want to see the percentage of all total logged time spent on each activity.
 * I want to be able to remove a period of activity, and have the app confirm it.
+
+To do:
+
 * I want to be able to compare the time I spend on an activity to the user average.
 
 ## Setup/Installation Requirements
@@ -87,8 +53,23 @@ Contact me on github if you have any questions.
 * Ruby on Rails
 * HTML
 * Bootstrap
-* node.js
+* Mailchimp API
 
+#### Gems:
+
+General:
+* time_difference
+* mailchimp
+* devise
+
+Testing and Benchmarking:
+* newrelic_rpm
+* capybara
+* poltergeist
+* simplecov
+* factory_girl_rails
+* rubocop
+* shoulda-matchers
 
 ### License
 
