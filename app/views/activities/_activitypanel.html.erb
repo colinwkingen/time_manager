@@ -1,7 +1,7 @@
 <div class="col-md-6">
   <li><h4>
     <div class="list_item">
-      <div class="switch_activity<%= activity.id %>" >
+      <div class="switch_activity<%= activity.id %> start_button" >
         <%= form_for [ day, activity ], remote: true do |f| %>
               <%= f.hidden_field :start_time, value: Time.now %>
               <%= f.hidden_field :end_time, value: "" %>

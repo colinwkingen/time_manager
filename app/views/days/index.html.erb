@@ -16,9 +16,7 @@
     </div>
 
     <div class="col-xs-7">
-
       <div id="totalbar"><%= render partial: "dashbar", locals: { days: current_user.days } %></div>
-
     </div>
 
   </div>
@@ -27,7 +25,8 @@
     <h1 id="intro-header"><strong>Please log in or sign up to continue.</strong></h1>
 
     <h3 class="text-xs-center">CodeWatch is an app designed to help developers keep track of how much time they spend on various tasks. Create an account now and begin logging activities. </h3>
+    
     <br>
-    <p><%= link_to "Sign Up", user_session_path, id: 'signin', class: "btn btn-default field" %></p>
+    <p><%= link_to "Create Account", new_user_registration_path, class: "btn btn-default field" %></p>
   </div>
 <% end %>

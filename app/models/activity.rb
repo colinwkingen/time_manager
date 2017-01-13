@@ -1,7 +1,7 @@
 class Activity < ActiveRecord::Base
   belongs_to :day
   default_scope { order('id ASC') }
-
+  validates :color, :presence => true
 
   def return_time
     minutes = self.total_time / 60
