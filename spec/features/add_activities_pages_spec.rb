@@ -14,9 +14,9 @@ describe 'the add activity to day process' do
   it 'takes you to a page where you can add an activity to a day' do
     visit days_path
     click_link 'Log a Day'
-    select '24', :from => 'day_datefield_3i'
-    select 'March', :from => 'day_datefield_2i'
-    select '2030', :from => 'day_datefield_1i'
+    select '24', from: 'day_datefield_3i'
+    select 'March', from: 'day_datefield_2i'
+    select '2030', from: 'day_datefield_1i'
     click_on 'Create Day'
     click_link 'Sunday'
     expect(page).to have_content 'Sunday'

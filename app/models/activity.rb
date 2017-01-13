@@ -1,6 +1,5 @@
 class Activity < ActiveRecord::Base
   belongs_to :day
-  validates :name, :presence => true
   default_scope { order('id ASC') }
 
 
@@ -32,5 +31,3 @@ class Activity < ActiveRecord::Base
     return [seconds, minutes, hours]
   end
 end
-# Get updated times from here. These methods return the same value until
-# the timestamp is made.

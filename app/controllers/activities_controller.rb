@@ -11,7 +11,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @day = Day.find(params[:day_id])
-    @activity = @day.activities.create({name: "Entry Not Named", color: "#FFF"})
+    @activity = @day.activities.create({name: " ", color: "#FFF"})
   end
 
   # def create
