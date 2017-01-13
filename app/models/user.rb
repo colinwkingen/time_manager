@@ -25,18 +25,23 @@ class User < ApplicationRecord
     total
   end
 
+  def grand_total(activity_h)
+    activity_h.each do |key, value|
+      value[:count][1] = value[:time] / 60
+      value[:count][2] = value[:count][1] / 60
+      value[:count][0] = value[:time] % 60
+    end
+    activity_h
+  end
+
   def activity_totals
     activity_h = {}
     self.days.each do |day|
       day.activities.each do |activity|
         value = {time: activity.total_time, color: activity.color, count: activity.return_time, percentage: 0}
         key = activity.name
-        time_arr = activity.return_time
         if activity_h.key?(key)
           activity_h[key][:time] += activity.total_time
-          activity_h[key][:count][0] += time_arr[0]
-          activity_h[key][:count][1] += time_arr[1]
-          activity_h[key][:count][2] += time_arr[2]
         else
           activity_h.store(key, value)
         end
@@ -45,6 +50,7 @@ class User < ApplicationRecord
         end
       end
     end
+    activity_h = self.grand_total(activity_h)
     activity_h
   end
 end
