@@ -1,7 +1,7 @@
 
 <% @day.activities.each do |activity| %>
   <div class="bar<%= activity.percentage %>">
-  <% if activity.percentage %>
+  <% if activity.percentage > 0 %>
       <br>
       <p>
         <label class="pull-right"><%= activity.name %> - <%= activity.percentage %>%</label>

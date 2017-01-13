@@ -19,10 +19,10 @@ Done:
 * I want to see the percentage of an individual day spent on each activity.
 * I want to see the percentage of all total logged time spent on each activity.
 * I want to be able to remove a period of activity, and have the app confirm it.
+* I want to have the amounts and percentages of only my users activities displayed after login.  
 
 To do:
 
-* I want to have the amounts and percentages of only my users activities displayed after login.  
 * I want my user's list of days to be organized by date, latest first.
 * I want to be able to compare the time I spend on an activity to the user average.
 
