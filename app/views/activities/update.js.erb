@@ -16,6 +16,7 @@ var percentage = parseInt(<%= @activity.percentage %>);*/
 function start_time() {
   var meter = "";
   if ('<%= @activity.timer_switch %>' == 'true') {
+    /*$(".start_button").hide();*/
     seconds += 1;
     if ( seconds >= 60 ) {
       minutes += 1;
@@ -29,6 +30,7 @@ function start_time() {
     var t = setTimeout(start_time, 1000);
   } else {
     $("#totalbar").html('<%= j render partial: "totalbar", locals: { day: @day } %>');
+    /*$(".start_button").show();*/
     window.clearTimeout(t);
   }
 }
