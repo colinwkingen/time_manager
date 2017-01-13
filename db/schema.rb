@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20161229225821) do
   enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name", default: "Entry Not Named"
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.integer  "day_id"

@@ -2,6 +2,7 @@ class Day < ActiveRecord::Base
   belongs_to :user
   has_many :activities
   validates :datefield, :presence => true
+  default_scope { order('datefield ASC') }
 
   after_create :create_defaults
 

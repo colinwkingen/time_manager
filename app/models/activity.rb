@@ -1,6 +1,5 @@
 class Activity < ActiveRecord::Base
   belongs_to :day
-  validates :name, :presence => true
   default_scope { order('id ASC') }
 
 
