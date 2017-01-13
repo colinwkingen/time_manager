@@ -1,14 +1,16 @@
 
 <% @day.activities.each do |activity| %>
   <div class="bar<%= activity.percentage %>">
-  <% if activity.percentage > 0 %>
-      <br>
-      <p>
-        <label class="pull-right"><%= activity.name %> - <%= activity.percentage %>%</label>
-      <br>
-      </p>
-      <% for i in 0..activity.percentage do %>
-        <div class="minute-tick" style="background-color:<%= activity.color %>;"></div>
+    <% if activity.percentage %>
+      <% if activity.percentage > 0 %>
+        <br>
+        <p>
+          <label class="pull-right"><%= activity.name %> - <%= activity.percentage %>%</label>
+        <br>
+        </p>
+        <% for i in 0..activity.percentage do %>
+          <div class="minute-tick" style="background-color:<%= activity.color %>;"></div>
+        <% end %>
       <% end %>
     <% end %>
   </div>

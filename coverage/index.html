@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-12T10:59:22-08:00">2017-01-12T10:59:22-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-01-12T18:26:56-08:00">2017-01-12T18:26:56-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.07%</span></span>
+    (<span class="covered_percent"><span class="green">93.15%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         10.8
+         20.16
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>38</b> files in total.
-    <b>353</b> relevant lines. 
-    <span class="green"><b>325</b> lines covered</span> and
-    <span class="red"><b>28</b> lines missed </span>
+    <b>365</b> relevant lines. 
+    <span class="green"><b>340</b> lines covered</span> and
+    <span class="red"><b>25</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -123,11 +123,11 @@
       <tr>
         <td class="strong"><a href="#54e64ae85778bc72071a8fa029a99d2fdda632f4" class="src_link" title="app/models/activity.rb">app/models/activity.rb</a></td>
         <td class="red strong">68.18 %</td>
-        <td>36</td>
+        <td>34</td>
         <td>22</td>
         <td>15</td>
         <td>7</td>
-        <td>122.5</td>
+        <td>163.2</td>
       </tr>
       
       <tr>
@@ -142,22 +142,22 @@
       
       <tr>
         <td class="strong"><a href="#61fb4d226e712fbbf0682a5875fccba1af607419" class="src_link" title="app/models/day.rb">app/models/day.rb</a></td>
-        <td class="yellow strong">80.95 %</td>
+        <td class="green strong">100.0 %</td>
         <td>31</td>
         <td>21</td>
-        <td>17</td>
-        <td>4</td>
-        <td>9.1</td>
+        <td>21</td>
+        <td>0</td>
+        <td>87.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#7d5eee948a47792e14e409658c99a5a7dc24cfe4" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
-        <td class="yellow strong">83.33 %</td>
-        <td>37</td>
-        <td>18</td>
-        <td>15</td>
-        <td>3</td>
-        <td>26.3</td>
+        <td class="yellow strong">86.67 %</td>
+        <td>50</td>
+        <td>30</td>
+        <td>26</td>
+        <td>4</td>
+        <td>49.2</td>
       </tr>
       
       <tr>
@@ -1486,8 +1486,8 @@
           <code class="ruby">  validates :name, :presence =&gt; true</code>
         </li>
       
-        <li class="covered" data-hits="446" data-linenumber="4">
-          <span class="hits">446</span>
+        <li class="covered" data-hits="301" data-linenumber="4">
+          <span class="hits">301</span>
           
           <code class="ruby">  default_scope { order(&#39;id ASC&#39;) }</code>
         </li>
@@ -1510,26 +1510,26 @@
           <code class="ruby">  def return_time</code>
         </li>
       
-        <li class="covered" data-hits="210" data-linenumber="8">
-          <span class="hits">210</span>
+        <li class="covered" data-hits="470" data-linenumber="8">
+          <span class="hits">470</span>
           
           <code class="ruby">    minutes = self.total_time / 60</code>
         </li>
       
-        <li class="covered" data-hits="210" data-linenumber="9">
-          <span class="hits">210</span>
+        <li class="covered" data-hits="470" data-linenumber="9">
+          <span class="hits">470</span>
           
           <code class="ruby">    hours = minutes / 60</code>
         </li>
       
-        <li class="covered" data-hits="210" data-linenumber="10">
-          <span class="hits">210</span>
+        <li class="covered" data-hits="470" data-linenumber="10">
+          <span class="hits">470</span>
           
           <code class="ruby">    seconds = self.total_time % 60</code>
         </li>
       
-        <li class="covered" data-hits="210" data-linenumber="11">
-          <span class="hits">210</span>
+        <li class="covered" data-hits="470" data-linenumber="11">
+          <span class="hits">470</span>
           
           <code class="ruby">    return [seconds, minutes, hours]</code>
         </li>
@@ -1672,18 +1672,6 @@
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby"># Get updated times from here. These methods return the same value until</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby"># the timestamp is made.</code>
-        </li>
-      
     </ol>
   </pre>
 </div>
@@ -1727,11 +1715,11 @@
         <div class="source_table" id="61fb4d226e712fbbf0682a5875fccba1af607419">
   <div class="header">
     <h3>app/models/day.rb</h3>
-    <h4><span class="yellow">80.95 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>21</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <span class="green"><b>21</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -1822,20 +1810,20 @@
           <code class="ruby">  def day_total</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="169" data-linenumber="15">
+          <span class="hits">169</span>
           
           <code class="ruby">    day_total = 0</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
-          
+        <li class="covered" data-hits="169" data-linenumber="16">
+          <span class="hits">169</span>
           
           <code class="ruby">    self.activities.each do |activity|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="17">
-          
+        <li class="covered" data-hits="1144" data-linenumber="17">
+          <span class="hits">1144</span>
           
           <code class="ruby">      day_total += activity.total_time</code>
         </li>
@@ -1846,8 +1834,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="19">
-          
+        <li class="covered" data-hits="169" data-linenumber="19">
+          <span class="hits">169</span>
           
           <code class="ruby">    day_total</code>
         </li>
@@ -1931,11 +1919,11 @@
         <div class="source_table" id="7d5eee948a47792e14e409658c99a5a7dc24cfe4">
   <div class="header">
     <h3>app/models/user.rb</h3>
-    <h4><span class="yellow">83.33 %</span> covered</h4>
+    <h4><span class="yellow">86.67 %</span> covered</h4>
     <div>
-      <b>18</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>30</b> relevant lines. 
+      <span class="green"><b>26</b> lines covered</span> and
+      <span class="red"><b>4</b> lines missed.</span>
     </div>
   </div>
   
@@ -2056,109 +2044,187 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">  # Should return totals of all activities and totals of activity time for the user as a hash</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">  # instead returns empty hash. FIX. Gets a small number now...</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def activity_totals</code>
+          <code class="ruby">  def days_total</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="24">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="130" data-linenumber="21">
+          <span class="hits">130</span>
           
-          <code class="ruby">    activity_h = {}</code>
+          <code class="ruby">    total = 0</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="25">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="130" data-linenumber="22">
+          <span class="hits">130</span>
           
           <code class="ruby">    self.days.each do |day|</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="26">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="169" data-linenumber="23">
+          <span class="hits">169</span>
           
-          <code class="ruby">      day.activities.each do |activity|</code>
+          <code class="ruby">      total += day.day_total</code>
         </li>
       
-        <li class="covered" data-hits="130" data-linenumber="27">
-          <span class="hits">130</span>
-          
-          <code class="ruby">        key = activity.name</code>
-        </li>
-      
-        <li class="covered" data-hits="130" data-linenumber="28">
-          <span class="hits">130</span>
-          
-          <code class="ruby">        if activity_h.key?(key)</code>
-        </li>
-      
-        <li class="covered" data-hits="18" data-linenumber="29">
-          <span class="hits">18</span>
-          
-          <code class="ruby">          activity_h[key] += activity.total_time</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby">        else</code>
-        </li>
-      
-        <li class="covered" data-hits="112" data-linenumber="31">
-          <span class="hits">112</span>
-          
-          <code class="ruby">          activity_h.store(activity.name, activity.total_time)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="32">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="33">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="35">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="130" data-linenumber="25">
+          <span class="hits">130</span>
           
-          <code class="ruby">    activity_h</code>
+          <code class="ruby">    total</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def activity_totals</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="29">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    activity_h = {}</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="30">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    self.days.each do |day|</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="31">
+          <span class="hits">19</span>
+          
+          <code class="ruby">      day.activities.each do |activity|</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="32">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        value = {time: activity.total_time, color: activity.color, count: activity.return_time, percentage: 0}</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="33">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        key = activity.name</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="34">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        time_arr = activity.return_time</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="35">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        if activity_h.key?(key)</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="36">
+          <span class="hits">18</span>
+          
+          <code class="ruby">          activity_h[key][:time] += activity.total_time</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="37">
+          <span class="hits">18</span>
+          
+          <code class="ruby">          activity_h[key][:count][0] += time_arr[0]</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="38">
+          <span class="hits">18</span>
+          
+          <code class="ruby">          activity_h[key][:count][1] += time_arr[1]</code>
+        </li>
+      
+        <li class="covered" data-hits="18" data-linenumber="39">
+          <span class="hits">18</span>
+          
+          <code class="ruby">          activity_h[key][:count][2] += time_arr[2]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">        else</code>
+        </li>
+      
+        <li class="covered" data-hits="112" data-linenumber="41">
+          <span class="hits">112</span>
+          
+          <code class="ruby">          activity_h.store(key, value)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="130" data-linenumber="43">
+          <span class="hits">130</span>
+          
+          <code class="ruby">        if (self.days_total.to_f &gt; 0) &amp;&amp; (self.days_total.to_f.is_a? Numeric)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="44">
+          
+          
+          <code class="ruby">          activity_h[key][:percentage] = ((activity_h[key][:time].to_f / self.days_total.to_f).round(2) * 100).to_i</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="19" data-linenumber="48">
+          <span class="hits">19</span>
+          
+          <code class="ruby">    activity_h</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">end</code>

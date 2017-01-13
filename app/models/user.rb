@@ -29,7 +29,7 @@ class User < ApplicationRecord
     activity_h = {}
     self.days.each do |day|
       day.activities.each do |activity|
-        value = {time: activity.total_time, color: activity.color, count: activity.return_time}
+        value = {time: activity.total_time, color: activity.color, count: activity.return_time, percentage: 0}
         key = activity.name
         time_arr = activity.return_time
         if activity_h.key?(key)
@@ -40,7 +40,9 @@ class User < ApplicationRecord
         else
           activity_h.store(key, value)
         end
-        activity_h[key][:percentage] = ((activity_h[key][:time].to_f / self.days_total.to_f).round(2) * 100).to_i
+        if (self.days_total.to_f > 0) && (self.days_total.to_f.is_a? Numeric)
+          activity_h[key][:percentage] = ((activity_h[key][:time].to_f / self.days_total.to_f).round(2) * 100).to_i
+        end
       end
     end
     activity_h
