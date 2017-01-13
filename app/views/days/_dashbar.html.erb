@@ -1,15 +1,8 @@
-
-  <%  current_user.activity_totals.each do |activity| %>
-    <% if activity[1][:percentage] > 0 %>
-      <p><h4><%= activity[0] %> - %<%= activity[1][:percentage] %> of total time - </h4></p>
-      <% for i in 0..activity[1][:percentage] do %>
-          <div class="minute-tick" style="background-color:<%= activity[1][:color] %>;"></div>
-      <% end %>
+<%  current_user.activity_totals.each do |act| %>
+  <% if act[1][:percentage] > 0 %>
+    <p><h4><%= act[0] %> - Total Time: <%= act[1][:count][2]%> : <%= act[1][:count][1]%> : <%= act[1][:count][0]%> - <%= act[1][:percentage] %>% of total time</h4></p>
+    <% for i in 0..act[1][:percentage] do %>
+        <div class="minute-tick" style="background-color:<%= act[1][:color] %>;"></div>
     <% end %>
   <% end %>
-
-
-
-<%=
-  current_user.activity_totals
-%>
+<% end %>

@@ -29,10 +29,14 @@ class User < ApplicationRecord
     activity_h = {}
     self.days.each do |day|
       day.activities.each do |activity|
-        value = {time: activity.total_time, percentage: 0, color: activity.color}
+        value = {time: activity.total_time, color: activity.color, count: activity.return_time}
         key = activity.name
+        time_arr = activity.return_time
         if activity_h.key?(key)
           activity_h[key][:time] += activity.total_time
+          activity_h[key][:count][0] += time_arr[0]
+          activity_h[key][:count][1] += time_arr[1]
+          activity_h[key][:count][2] += time_arr[2]
         else
           activity_h.store(key, value)
         end
